@@ -110,12 +110,12 @@ $perfil = $session->read('Auth.User');
                     <li class="active">
                         <a class="has-arrow" href="index.html">
                             <span class="educate-icon educate-home icon-wrap"></span>
-                            <span class="mini-click-non">Education</span>
+                            <span class="mini-click-non">Educafro</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
-                            <li><a title="Dashboard v.2" href="index-1.html"><span class="mini-sub-pro">Dashboard v.2</span></a></li>
-                            <li><a title="Dashboard v.3" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
+                            <li><a title="Timeline" href="index.html"><span class="mini-sub-pro">Timeline</span></a></li>
+                            <li><a title="Evento publico" href="index-1.html"><span class="mini-sub-pro">Evento público</span></a></li>
+                            <li><a title="" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
                             <li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>
                             <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                         </ul>
