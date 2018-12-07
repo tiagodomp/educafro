@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Created by PhpStorm.
  * User: Tiago Pereira
@@ -114,57 +114,57 @@ $perfil = $session->read('Auth.User');
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
                             <li><a title="Timeline" href="index.html"><span class="mini-sub-pro">Timeline</span></a></li>
-                            <li><a title="Evento publico" href="index-1.html"><span class="mini-sub-pro">Evento público</span></a></li>
-                            <li><a title="" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
-                            <li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>
-                            <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
+                            <li><a title="Minhas Demandas" href="index-1.html"><span class="mini-sub-pro">Minhas Demandas</span></a></li>
+                            <li><a title="pesquisa recursiva” href="index-2.html"><span class="mini-sub-pro">Pesquisa recursiva</span></a></li>
+                            <li><a title="Análise técnica” href="analytics.html"><span class="mini-sub-pro">Análise Técnica</span></a></li>
+                            <li><a title="laboratório de Insights" href="widgets.html"><span class="mini-sub-pro">Laboratório de Insights</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
+                        <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Eventos</span></a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professors</span></a>
+                        <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professores</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
-                            <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
-                            <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
-                            <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Professor Profile</span></a></li>
+                            <li><a title="Todos profesores" href="all-professors.html"><span class="mini-sub-pro">Todos Professores</span></a></li>
+                            <li><a title="Novo Professor" href="add-professor.html"><span class="mini-sub-pro">Novo Professor</span></a></li>
+                            <li><a title="Editar Professor" href="edit-professor.html"><span class="mini-sub-pro">Editar Professor</span></a></li>
+                            <li><a title="Perfil do Professor" href="professor-profile.html"><span class="mini-sub-pro">Perfil do Professor</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
+                        <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alunos</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
-                            <li><a title="Add Students" href="add-student.html"><span class="mini-sub-pro">Add Student</span></a></li>
-                            <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
-                            <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>
+                            <li><a title="Todos Alunos" href="all-students.html"><span class="mini-sub-pro">Todos Alunos</span></a></li>
+                            <li><a title="Novo Aluno" href="add-student.html"><span class="mini-sub-pro">Novo Aluno</span></a></li>
+                            <li><a title="Editar Aluno" href="edit-student.html"><span class="mini-sub-pro">Editar Aluno</span></a></li>
+                            <li><a title="Perfil do Aluno" href="student-profile.html"><span class="mini-sub-pro">Perfil do Aluno</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
+                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">All Courses</span></a></li>
-                            <li><a title="Add Courses" href="add-course.html"><span class="mini-sub-pro">Add Course</span></a></li>
-                            <li><a title="Edit Courses" href="edit-course.html"><span class="mini-sub-pro">Edit Course</span></a></li>
-                            <li><a title="Courses Profile" href="course-info.html"><span class="mini-sub-pro">Courses Info</span></a></li>
-                            <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
+                            <li><a title="Todos os cursos" href="all-courses.html"><span class="mini-sub-pro">Todos os cursos</span></a></li>
+                            <li><a title="Novo Curso" href="add-course.html"><span class="mini-sub-pro">Novo Curso</span></a></li>
+                            <li><a title="Editar Curso" href="edit-course.html"><span class="mini-sub-pro">Editar Curso</span></a></li>
+                            <li><a title="Ver Curso" href="course-info.html"><span class="mini-sub-pro">Ver Curso</span></a></li>
+                            <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Análise de Curso</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Library</span></a>
+                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Maleta de Ferramentas</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>
-                            <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Add Library Asset</span></a></li>
-                            <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Library Asset</span></a></li>
+                            <li><a title="Todas as ferramentas" href="library-assets.html"><span class="mini-sub-pro">Todas as ferramentas</span></a></li>
+                            <li><a title="Nova Ferramenta" href="add-library-assets.html"><span class="mini-sub-pro">Nova Ferramenta</span></a></li>
+                            <li><a title="Editar Ferramentas" href="edit-library-assets.html"><span class="mini-sub-pro">Editar Ferramentas</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departments</span></a>
+                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departamentos</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Departments List</span></a></li>
-                            <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Departments</span></a></li>
-                            <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
+                            <li><a title="Lista de Departamentos" href="departments.html"><span class="mini-sub-pro">Lista de Departamentos</span></a></li>
+                            <li><a title="Criar Departamento" href="add-department.html"><span class="mini-sub-pro">Criar Departamento</span></a></li>
+                            <li><a title="Editar Departamentos" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
                         </ul>
                     </li>
                     <li>
