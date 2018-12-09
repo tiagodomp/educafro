@@ -95,7 +95,7 @@ $perfil = $session->read('Auth.User');
 </head>
 <body>
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">Você está utilizando um navegador<strong>desatualizado</strong> Por favor, <a href="https://www.microsoft.com/pt-br/windows/microsoft-edge">atualize seu navegador</a> para melhorar sua experiência.</p>
 <![endif]-->
 <!-- Start Left menu area -->
 <div class="left-sidebar-pro">
@@ -133,6 +133,15 @@ $perfil = $session->read('Auth.User');
                         </ul>
                     </li>
                     <li>
+                        <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Voluntários</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="Todos profesores" href="all-professors.html"><span class="mini-sub-pro">Todos Voluntários</span></a></li>
+                            <li><a title="Novo Professor" href="add-professor.html"><span class="mini-sub-pro">Novo Voluntário</span></a></li>
+                            <li><a title="Editar Professor" href="edit-professor.html"><span class="mini-sub-pro">Editar Voluntário</span></a></li>
+                            <li><a title="Perfil do Professor" href="professor-profile.html"><span class="mini-sub-pro">Perfil do Voluntário</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alunos</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todos Alunos" href="all-students.html"><span class="mini-sub-pro">Todos Alunos</span></a></li>
@@ -164,80 +173,16 @@ $perfil = $session->read('Auth.User');
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Lista de Departamentos" href="departments.html"><span class="mini-sub-pro">Lista de Departamentos</span></a></li>
                             <li><a title="Criar Departamento" href="add-department.html"><span class="mini-sub-pro">Criar Departamento</span></a></li>
-                            <li><a title="Editar Departamentos" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
+                            <li><a title="Editar Departamentos" href="edit-department.html"><span class="mini-sub-pro">Editar Departamentos</span></a></li>
+                            <li><a title="Análise Departamental" href="edit-department.html"><span class="mini-sub-pro">Análise Departamental</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Mailbox</span></a>
+                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Caixa de Mensagens</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Inbox" href="mailbox.html"><span class="mini-sub-pro">Inbox</span></a></li>
-                            <li><a title="View Mail" href="mailbox-view.html"><span class="mini-sub-pro">View Mail</span></a></li>
-                            <li><a title="Compose Mail" href="mailbox-compose.html"><span class="mini-sub-pro">Compose Mail</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Interface</span></a>
-                        <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
-                            <li><a title="Google Map" href="google-map.html"><span class="mini-sub-pro">Google Map</span></a></li>
-                            <li><a title="Data Maps" href="data-maps.html"><span class="mini-sub-pro">Data Maps</span></a></li>
-                            <li><a title="Pdf Viewer" href="pdf-viewer.html"><span class="mini-sub-pro">Pdf Viewer</span></a></li>
-                            <li><a title="X-Editable" href="x-editable.html"><span class="mini-sub-pro">X-Editable</span></a></li>
-                            <li><a title="Code Editor" href="code-editor.html"><span class="mini-sub-pro">Code Editor</span></a></li>
-                            <li><a title="Tree View" href="tree-view.html"><span class="mini-sub-pro">Tree View</span></a></li>
-                            <li><a title="Preloader" href="preloader.html"><span class="mini-sub-pro">Preloader</span></a></li>
-                            <li><a title="Images Cropper" href="images-cropper.html"><span class="mini-sub-pro">Images Cropper</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-charts icon-wrap"></span> <span class="mini-click-non">Charts</span></a>
-                        <ul class="submenu-angle chart-mini-nb-dp" aria-expanded="false">
-                            <li><a title="Bar Charts" href="bar-charts.html"><span class="mini-sub-pro">Bar Charts</span></a></li>
-                            <li><a title="Line Charts" href="line-charts.html"><span class="mini-sub-pro">Line Charts</span></a></li>
-                            <li><a title="Area Charts" href="area-charts.html"><span class="mini-sub-pro">Area Charts</span></a></li>
-                            <li><a title="Rounded Charts" href="rounded-chart.html"><span class="mini-sub-pro">Rounded Charts</span></a></li>
-                            <li><a title="C3 Charts" href="c3.html"><span class="mini-sub-pro">C3 Charts</span></a></li>
-                            <li><a title="Sparkline Charts" href="sparkline.html"><span class="mini-sub-pro">Sparkline Charts</span></a></li>
-                            <li><a title="Peity Charts" href="peity.html"><span class="mini-sub-pro">Peity Charts</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Tables</span></a>
-                        <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>
-                            <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Data Table</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Forms Elements</span></a>
-                        <ul class="submenu-angle form-mini-nb-dp" aria-expanded="false">
-                            <li><a title="Basic Form Elements" href="basic-form-element.html"><span class="mini-sub-pro">Bc Form Elements</span></a></li>
-                            <li><a title="Advance Form Elements" href="advance-form-element.html"><span class="mini-sub-pro">Ad Form Elements</span></a></li>
-                            <li><a title="Password Meter" href="password-meter.html"><span class="mini-sub-pro">Password Meter</span></a></li>
-                            <li><a title="Multi Upload" href="multi-upload.html"><span class="mini-sub-pro">Multi Upload</span></a></li>
-                            <li><a title="Text Editor" href="tinymc.html"><span class="mini-sub-pro">Text Editor</span></a></li>
-                            <li><a title="Dual List Box" href="dual-list-box.html"><span class="mini-sub-pro">Dual List Box</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap"></span> <span class="mini-click-non">App views</span></a>
-                        <ul class="submenu-angle app-mini-nb-dp" aria-expanded="false">
-                            <li><a title="Notifications" href="notifications.html"><span class="mini-sub-pro">Notifications</span></a></li>
-                            <li><a title="Alerts" href="alerts.html"><span class="mini-sub-pro">Alerts</span></a></li>
-                            <li><a title="Modals" href="modals.html"><span class="mini-sub-pro">Modals</span></a></li>
-                            <li><a title="Buttons" href="buttons.html"><span class="mini-sub-pro">Buttons</span></a></li>
-                            <li><a title="Tabs" href="tabs.html"><span class="mini-sub-pro">Tabs</span></a></li>
-                            <li><a title="Accordion" href="accordion.html"><span class="mini-sub-pro">Accordion</span></a></li>
-                        </ul>
-                    </li>
-                    <li id="removable">
-                        <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap"></span> <span class="mini-click-non">Pages</span></a>
-                        <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                            <li><a title="Login" href="login.html"><span class="mini-sub-pro">Login</span></a></li>
-                            <li><a title="Register" href="register.html"><span class="mini-sub-pro">Register</span></a></li>
-                            <li><a title="Lock" href="lock.html"><span class="mini-sub-pro">Lock</span></a></li>
-                            <li><a title="Password Recovery" href="password-recovery.html"><span class="mini-sub-pro">Password Recovery</span></a></li>
-                            <li><a title="404 Page" href="404.html"><span class="mini-sub-pro">404 Page</span></a></li>
-                            <li><a title="500 Page" href="500.html"><span class="mini-sub-pro">500 Page</span></a></li>
+                            <li><a title="Recentes" href="mailbox.html"><span class="mini-sub-pro">Recentes</span></a></li>
+                            <li><a title="Solicitações de mensagens" href="mailbox-view.html"><span class="mini-sub-pro">Solicitações de Mensagens</span></a></li>
+                            <li><a title="Novo Grupo" href="mailbox-compose.html"><span class="mini-sub-pro">Novo Grupo</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -282,22 +227,22 @@ $perfil = $session->read('Auth.User');
                             <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                 <div class="header-top-menu tabl-d-n">
                                     <ul class="nav navbar-nav mai-top-nav">
-                                        <li class="nav-item"><a href="#" class="nav-link">Home</a>
+                                        <li class="nav-item"><a href="#" class="nav-link">Início</a>
                                         </li>
                                         <li class="nav-item"><a href="#" class="nav-link">About</a>
                                         </li>
                                         <li class="nav-item"><a href="#" class="nav-link">Services</a>
                                         </li>
                                         <li class="nav-item dropdown res-dis-nn">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Project <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Demandas<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
                                             <div role="menu" class="dropdown-menu animated zoomIn">
-                                                <a href="#" class="dropdown-item">Documentation</a>
-                                                <a href="#" class="dropdown-item">Expert Backend</a>
-                                                <a href="#" class="dropdown-item">Expert FrontEnd</a>
-                                                <a href="#" class="dropdown-item">Contact Support</a>
+                                                <a href="#" class="dropdown-item">Minhas Demandas</a>
+                                                <a href="#" class="dropdown-item">Demandas em desenvolvimento</a>
+                                                <a href="#" class="dropdown-item">Contibruir em alguma demanda</a>
+                                                <a href="#" class="dropdown-item">Todas demandas públicas</a>
                                             </div>
                                         </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Support</a>
+                                        <li class="nav-item"><a href="#" class="nav-link">Suporte</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -309,13 +254,13 @@ $perfil = $session->read('Auth.User');
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
                                             <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
                                                 <div class="message-single-top">
-                                                    <h1>Message</h1>
+                                                    <h1>Mensagem</h1>
                                                 </div>
                                                 <ul class="message-menu">
                                                     <li>
                                                         <a href="#">
                                                             <div class="message-img">
-                                                                <img src="img/assets/contact/1.jpg" alt="">
+                                                                <img src="img/assets/contact/1.jpg" alt="Foto do Perfil do Usuário">
                                                             </div>
                                                             <div class="message-content">
                                                                 <span class="message-date">16 Sept</span>
@@ -362,14 +307,14 @@ $perfil = $session->read('Auth.User');
                                                     </li>
                                                 </ul>
                                                 <div class="message-view">
-                                                    <a href="#">View All Messages</a>
+                                                    <a href="#">Ver todas mensagens </a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
                                             <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                 <div class="notification-single-top">
-                                                    <h1>Notifications</h1>
+                                                    <h1>Notificações</h1>
                                                 </div>
                                                 <ul class="notification-menu">
                                                     <li>
@@ -422,26 +367,26 @@ $perfil = $session->read('Auth.User');
                                                     </li>
                                                 </ul>
                                                 <div class="notification-view">
-                                                    <a href="#">View All Notification</a>
+                                                    <a href="#">Ver todas notificações</a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                 <img src="img/assets/product/pro4.jpg" alt="" />
-                                                <span class="admin-name">Prof.Anderson</span>
+                                                <span class="admin-name"><b class="">Prof.</b> Angelina</span>
                                                 <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>Minha Conta</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
+                                                <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>Meu Perfil</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
+                                                <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>Meu Faturamento</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
+                                                <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Configurações</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Sair</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -449,11 +394,11 @@ $perfil = $session->read('Auth.User');
 
                                             <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
                                                 <ul class="nav nav-tabs custon-set-tab">
-                                                    <li class="active"><a data-toggle="tab" href="#Notes">Notes</a>
+                                                    <li class="active"><a data-toggle="tab" href="#Notes">Notas</a>
                                                     </li>
-                                                    <li><a data-toggle="tab" href="#Projects">Projects</a>
+                                                    <li><a data-toggle="tab" href="#Projects">Demandas</a>
                                                     </li>
-                                                    <li><a data-toggle="tab" href="#Settings">Settings</a>
+                                                    <li><a data-toggle="tab" href="#Settings">Configurações</a>
                                                     </li>
                                                 </ul>
 
@@ -461,8 +406,8 @@ $perfil = $session->read('Auth.User');
                                                     <div id="Notes" class="tab-pane fade in active">
                                                         <div class="notes-area-wrap">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-comments-o"></i> Latest Notes</h2>
-                                                                <p>You have 10 new message.</p>
+                                                                <h2><i class="fa fa-comments-o"></i>Últimas Notas</h2>
+                                                                <p>Você tem 10 novas mensagens</p>
                                                             </div>
                                                             <div class="notes-list-area notes-menu-scrollbar">
                                                                 <ul class="notes-menu-list">
@@ -603,8 +548,8 @@ $perfil = $session->read('Auth.User');
                                                     <div id="Projects" class="tab-pane fade">
                                                         <div class="projects-settings-wrap">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-cube"></i> Latest projects</h2>
-                                                                <p> You have 20 projects. 5 not completed.</p>
+                                                                <h2><i class="fa fa-cube"></i>Últimas demandas</h2>
+                                                                <p> Você tem 20 demandas. 5 não estão completas.</p>
                                                             </div>
                                                             <div class="project-st-list-area project-st-menu-scrollbar">
                                                                 <ul class="projects-st-menu-list">
@@ -759,8 +704,8 @@ $perfil = $session->read('Auth.User');
                                                     <div id="Settings" class="tab-pane fade">
                                                         <div class="setting-panel-area">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-gears"></i> Settings Panel</h2>
-                                                                <p> You have 20 Settings. 5 not completed.</p>
+                                                                <h2><i class="fa fa-gears"></i>Painel de configurações</h2>
+                                                                <p> Tem 5 ajustes que você precisa fazer.</p>
                                                             </div>
                                                             <ul class="setting-panel-list">
                                                                 <li>
