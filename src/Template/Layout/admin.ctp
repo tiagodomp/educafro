@@ -113,7 +113,7 @@ $perfil = $session->read('Auth.User');
                             <span class="mini-click-non">Educafro</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Timeline" href="index.html"><span class="mini-sub-pro">Timeline</span></a></li>
+                            <li><a title="Feed Noticias" href="index.html"><span class="mini-sub-pro">Feed de Notícias</span></a></li>
                             <li><a title="Minhas Demandas" href="index-1.html"><span class="mini-sub-pro">Minhas Demandas</span></a></li>
                             <li><a title="pesquisa recursiva” href="index-2.html"><span class="mini-sub-pro">Pesquisa recursiva</span></a></li>
                             <li><a title="Análise técnica” href="analytics.html"><span class="mini-sub-pro">Análise Técnica</span></a></li>
@@ -145,10 +145,10 @@ $perfil = $session->read('Auth.User');
                         <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todos os cursos" href="all-courses.html"><span class="mini-sub-pro">Todos os cursos</span></a></li>
-                            <li><a title="Novo Curso" href="add-course.html"><span class="mini-sub-pro">Novo Curso</span></a></li>
-                            <li><a title="Editar Curso" href="edit-course.html"><span class="mini-sub-pro">Editar Curso</span></a></li>
-                            <li><a title="Ver Curso" href="course-info.html"><span class="mini-sub-pro">Ver Curso</span></a></li>
-                            <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Análise de Curso</span></a></li>
+                            <li><a title="Novo Curso" href="add-course.html"><span class="mini-sub-pro">Novo curso</span></a></li>
+                            <li><a title="Editar Curso" href="edit-course.html"><span class="mini-sub-pro">Editar curso</span></a></li>
+                            <li><a title="Ver Curso" href="course-info.html"><span class="mini-sub-pro">Ver curso</span></a></li>
+                            <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Análise dos cursos</span></a></li>
                         </ul>
                     </li>
                     <li>
