@@ -9,9 +9,10 @@
 $cakeDescription = 'Educafro Descomplica';
 $session = $this->request->getSession();
 $perfil = $session->read('Auth.User');
+
 ?>
 
-<!doctype html>
+<?=  echo $this->Html->docType() ?>
 <html class="no-js" lang="pt-br">
 
 <head>
@@ -101,8 +102,19 @@ $perfil = $session->read('Auth.User');
 <div class="left-sidebar-pro">
     <nav id="sidebar" class="">
         <div class="sidebar-header">
-            <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a>
-            <strong><a href="index.html"><img src="img/assets/logo/logo-educafro-45x38px.png" alt="logo educafro 45x38px" /></a></strong>
+            <?= echo $this->Html->image("assets/logo/logo-educafro-horizontal-200x60px.png", [
+                "alt" => "Logo Educafro 200x60px",
+                'class' => 'main-logo',
+                'url' => ['controller' => '**************', 'action' => '***********']
+            ]) ?>
+            <!-- Saída: <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a> -->
+            <strong>
+                <?= echo $this->Html->image("assets/logo/logo-educafro-45x38px.png", [
+                    "alt" => "Logo Educafro 45x38px",
+                    'url' => ['controller' => '**************', 'action' => '***********']
+                ]) ?>
+                <!-- Saída: <a href="index.html"><img src="img/assets/logo/logo-educafro-45x38px.png" alt="logo educafro 45x38px" /></a>-->
+            </strong>
         </div>
         <div class="left-custom-menu-adp-wrap comment-scrollbar">
             <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -113,76 +125,203 @@ $perfil = $session->read('Auth.User');
                             <span class="mini-click-non">Educafro</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Feed Noticias" href="index.html"><span class="mini-sub-pro">Feed de Notícias</span></a></li>
-                            <li><a title="Minhas Demandas" href="index-1.html"><span class="mini-sub-pro">Minhas Demandas</span></a></li>
-                            <li><a title="pesquisa recursiva” href="index-2.html"><span class="mini-sub-pro">Pesquisa recursiva</span></a></li>
-                            <li><a title="Análise técnica” href="analytics.html"><span class="mini-sub-pro">Análise Técnica</span></a></li>
-                            <li><a title="laboratório de Insights" href="widgets.html"><span class="mini-sub-pro">Laboratório de Insights</span></a></li>
+                            <li><a title="Feed Noticias" href="<?= echo $this->Url->build([
+                                                                    "controller" => "*********",
+                                                                    "action" => "*********",
+                                                                    "fullbase" => true
+                                                                ]) ?>">
+                                    <span class="mini-sub-pro">Feed de Notícias</span>
+                                </a>
+                            </li>
+
+                            <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true)?>">
+                                    <span class="mini-sub-pro">Minhas Demandas</span> <!-- saida: http://dominio.com/user/demandas -->
+                                </a>
+                            </li>
+
+                            <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/timeline', true)?>">
+                                <span class="mini-sub-pro">Linha temporal</span>
+                                </a>
+                            </li>
+
+                            <li><a title="Análise técnica” href="<?= echo $this->Url->build('/analise', true)?>">
+                                <span class="mini-sub-pro">Análise Técnica</span>
+                                </a>
+                            </li>
+                            <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true)?>">
+                                    <span class="mini-sub-pro">Laboratório de Insights</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Eventos</span></a>
+                        <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true)?>" aria-expanded="false">
+                            <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
+                            <span class="mini-click-non">Eventos</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professores</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
+                            <span class="educate-icon educate-professor icon-wrap"></span>
+                            <span class="mini-click-non">Professores</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Todos profesores" href="all-professors.html"><span class="mini-sub-pro">Todos Professores</span></a></li>
-                            <li><a title="Novo Professor" href="add-professor.html"><span class="mini-sub-pro">Novo Professor</span></a></li>
-                            <li><a title="Editar Professor" href="edit-professor.html"><span class="mini-sub-pro">Editar Professor</span></a></li>
-                            <li><a title="Perfil do Professor" href="professor-profile.html"><span class="mini-sub-pro">Perfil do Professor</span></a></li>
+                            <li><a title="Todos profesores" href="<?= echo $this->Url->build('/professores/todos', true)?>">
+                                    <span class="mini-sub-pro">Todos Professores</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Professor" href="<?= echo $this->Url->build('/professores/novo', true)?>">
+                                    <span class="mini-sub-pro">Novo Professor</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Professor" href="<?= echo $this->Url->build('/professores/editar', true)?>">
+                                    <span class="mini-sub-pro">Editar Professor</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true)?>">
+                                    <span class="mini-sub-pro">Perfil do Professor</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Voluntários</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true)?>" aria-expanded="false">
+                            <span class="educate-icon educate-professor icon-wrap"></span>
+                            <span class="mini-click-non">Voluntários</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Todos profesores" href="all-professors.html"><span class="mini-sub-pro">Todos Voluntários</span></a></li>
-                            <li><a title="Novo Professor" href="add-professor.html"><span class="mini-sub-pro">Novo Voluntário</span></a></li>
-                            <li><a title="Editar Professor" href="edit-professor.html"><span class="mini-sub-pro">Editar Voluntário</span></a></li>
-                            <li><a title="Perfil do Professor" href="professor-profile.html"><span class="mini-sub-pro">Perfil do Voluntário</span></a></li>
+                            <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true)?>">
+                                    <span class="mini-sub-pro">Todos Voluntários</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Voluntário" href="<?= echo $this->Url->build('/voluntarios/novo', true)?>">
+                                    <span class="mini-sub-pro">Novo Voluntário</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Voluntários" href="<?= echo $this->Url->build('/voluntarios/editar', true)?>">
+                                    <span class="mini-sub-pro">Editar Voluntários</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">
+                                    <span class="mini-sub-pro">Perfil do Voluntário</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Alunos</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true)?>" aria-expanded="false">
+                            <span class="educate-icon educate-student icon-wrap"></span>
+                            <span class="mini-click-non">Alunos</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Todos Alunos" href="all-students.html"><span class="mini-sub-pro">Todos Alunos</span></a></li>
-                            <li><a title="Novo Aluno" href="add-student.html"><span class="mini-sub-pro">Novo Aluno</span></a></li>
-                            <li><a title="Editar Aluno" href="edit-student.html"><span class="mini-sub-pro">Editar Aluno</span></a></li>
-                            <li><a title="Perfil do Aluno" href="student-profile.html"><span class="mini-sub-pro">Perfil do Aluno</span></a></li>
+                            <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true)?>">
+                                    <span class="mini-sub-pro">Todos Alunos</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Aluno" href="<?= echo $this->Url->build('/alunos/novo', true)?>">
+                                    <span class="mini-sub-pro">Novo Aluno</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Aluno" href="<?= echo $this->Url->build('/alunos/editar', true)?>">
+                                    <span class="mini-sub-pro">Editar Aluno</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true)?>">
+                                    <span class="mini-sub-pro">Perfil do Aluno</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Cursos</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/cursos', true);?>" aria-expanded="false">
+                            <span class="educate-icon educate-course icon-wrap"></span>
+                            <span class="mini-click-non">Cursos</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Todos os cursos" href="all-courses.html"><span class="mini-sub-pro">Todos os cursos</span></a></li>
-                            <li><a title="Novo Curso" href="add-course.html"><span class="mini-sub-pro">Novo curso</span></a></li>
-                            <li><a title="Editar Curso" href="edit-course.html"><span class="mini-sub-pro">Editar curso</span></a></li>
-                            <li><a title="Ver Curso" href="course-info.html"><span class="mini-sub-pro">Ver curso</span></a></li>
-                            <li><a title="Product Payment" href="course-payment.html"><span class="mini-sub-pro">Análise dos cursos</span></a></li>
+                            <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
+                                    <span class="mini-sub-pro">Todos os cursos</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Curso" href="<?= echo $this->Url->build('/cursos/novo', true)?>">
+                                    <span class="mini-sub-pro">Novo curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Curso" href="<?= echo $this->Url->build('/cursos/editar', true)?>">
+                                    <span class="mini-sub-pro">Editar curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Ver Curso" href="<?= echo $this->Url->build('/cursos/perfil', true) ?>">
+                                    <span class="mini-sub-pro">Ver curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
+                                    <span class="mini-sub-pro">Análise dos cursos</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Maleta de Ferramentas</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true) ?>" aria-expanded="false">
+                            <span class="educate-icon educate-library icon-wrap"></span>
+                            <span class="mini-click-non">Maleta de Ferramentas</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Todas as ferramentas" href="library-assets.html"><span class="mini-sub-pro">Todas as ferramentas</span></a></li>
-                            <li><a title="Nova Ferramenta" href="add-library-assets.html"><span class="mini-sub-pro">Nova Ferramenta</span></a></li>
-                            <li><a title="Editar Ferramentas" href="edit-library-assets.html"><span class="mini-sub-pro">Editar Ferramentas</span></a></li>
+                            <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">
+                                    <span class="mini-sub-pro">Todas as ferramentas</span>
+                                </a>
+                            </li>
+                            <li><a title="Nova Ferramenta" href="<?= echo $this->Url->build('/ferramentas/novo', true) ?>">
+                                    <span class="mini-sub-pro">Nova Ferramenta</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Ferramentas" href="<?= echo $this->Url->build('/ferramentas/editar', true) ?>">
+                                    <span class="mini-sub-pro">Editar Ferramentas</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departamentos</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/departamentos', true) ?>" aria-expanded="false">
+                            <span class="educate-icon educate-department icon-wrap"></span>
+                            <span class="mini-click-non">Departamentos</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Lista de Departamentos" href="departments.html"><span class="mini-sub-pro">Lista de Departamentos</span></a></li>
-                            <li><a title="Criar Departamento" href="add-department.html"><span class="mini-sub-pro">Criar Departamento</span></a></li>
-                            <li><a title="Editar Departamentos" href="edit-department.html"><span class="mini-sub-pro">Editar Departamento</span></a></li>
-                            <li><a title="Análise Departamental" href="edit-department.html"><span class="mini-sub-pro">Análise Departamental</span></a></li>
+                            <li><a title="Lista de Departamentos" href="<?= echo $this->Url->build('/departamentos/todos', true) ?>">
+                                    <span class="mini-sub-pro">Lista de Departamentos</span>
+                                </a>
+                            </li>
+                            <li><a title="Criar Departamento" href="<?= echo $this->Url->build('/departamentos/novo', true) ?>">
+                                    <span class="mini-sub-pro">Criar Departamento</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Departamentos" href="<?= echo $this->Url->build('/departamentos/editar', true) ?>">
+                                    <span class="mini-sub-pro">Editar Departamento</span>
+                                </a>
+                            </li>
+                            <li><a title="Análise Departamental" href="<?= echo $this->Url->build('/departamentos/analise', true) ?>">
+                                    <span class="mini-sub-pro">Análise Departamental</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Caixa de Mensagens</span></a>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/mensagens', true) ?>" aria-expanded="false">
+                            <span class="educate-icon educate-message icon-wrap"></span>
+                            <span class="mini-click-non">Caixa de Mensagens</span>
+                        </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Recentes" href="mailbox.html"><span class="mini-sub-pro">Recentes</span></a></li>
-                            <li><a title="Solicitações de mensagens" href="mailbox-view.html"><span class="mini-sub-pro">Solicitações de Mensagens</span></a></li>
-                            <li><a title="Novo Grupo" href="mailbox-compose.html"><span class="mini-sub-pro">Novo Grupo</span></a></li>
+                            <li><a title="Recentes" href="<?= echo $this->Url->build('/mensagens/recentes', true) ?>">
+                                    <span class="mini-sub-pro">Recentes</span>
+                                </a>
+                            </li>
+                            <li><a title="Solicitações de mensagens" href="<?= echo $this->Url->build('/mensagens/solicitacoes', true) ?>">
+                                    <span class="mini-sub-pro">Solicitações de Mensagens</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Grupo" href="<?= echo $this->Url->build('/mensagens/grupo/novo', true) ?>">
+                                    <span class="mini-sub-pro">Novo Grupo</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -197,7 +336,12 @@ $perfil = $session->read('Auth.User');
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="logo-pro">
-                    <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a>
+                    <?= echo $this->Html->image("assets/logo/logo-educafro-horizontal-200x60px.png", [
+                        "alt" => "Logo Educafro 200x60px",
+                        'class' => 'main-logo',
+                        'url' => ['controller' => '**************', 'action' => '***********']
+                    ]) ?>
+                    <!-- saída: <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a> -->
                 </div>
             </div>
         </div>
@@ -205,7 +349,12 @@ $perfil = $session->read('Auth.User');
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="logo-pro">
-                <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a>
+                <?= echo $this->Html->image("assets/logo/logo-educafro-horizontal-200x60px.png", [
+                    "alt" => "Logo Educafro 200x60px",
+                    'class' => 'main-logo',
+                    'url' => ['controller' => '**************', 'action' => '***********']
+                ]) ?>
+                <!-- SAÍDA: <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a>-->
             </div>
         </div>
     </div>
@@ -227,22 +376,29 @@ $perfil = $session->read('Auth.User');
                             <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                 <div class="header-top-menu tabl-d-n">
                                     <ul class="nav navbar-nav mai-top-nav">
-                                        <li class="nav-item"><a href="#" class="nav-link">Início</a>
+                                        <li class="nav-item">
+                                            <a href="<?= echo $this->Url->build('/home', true) ?>" class="nav-link">Início</a>
                                         </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">About</a>
+                                        <li class="nav-item">
+                                            <a href="<?= echo $this->Url->build('/pesquisas', true) ?>" class="nav-link">Pesquisas</a>
                                         </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Services</a>
+                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/servicos', true) ?>" class="nav-link">Serviços</a>
                                         </li>
                                         <li class="nav-item dropdown res-dis-nn">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Demandas<span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Demandas
+                                                <span class="angle-down-topmenu">
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </a>
                                             <div role="menu" class="dropdown-menu animated zoomIn">
-                                                <a href="#" class="dropdown-item">Minhas Demandas</a>
-                                                <a href="#" class="dropdown-item">Demandas em desenvolvimento</a>
-                                                <a href="#" class="dropdown-item">Contibruir em alguma demanda</a>
-                                                <a href="#" class="dropdown-item">Todas demandas públicas</a>
+                                                <!-- demandas => truncadas, encerradas, concluídas, -->
+                                                <a href="<?= echo $this->Url->build('user/demandas/todos', true) ?>" class="dropdown-item">Minhas Demandas</a>
+                                                <a href="<?= echo $this->Url->build('/demandas/truncadas', true) ?>" class="dropdown-item">Demandas em desenvolvimento</a>
+                                                <a href="<?= echo $this->Url->build('/demandas/todos/', true) ?>" class="dropdown-item">Contibruir em alguma demanda</a>
+                                                <a href="<?= echo $this->Url->build('/demandas/todos', true) ?>" class="dropdown-item">Todas demandas públicas</a>
                                             </div>
                                         </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Suporte</a>
+                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/suporte', true) ?>" class="nav-link">Suporte</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -251,19 +407,26 @@ $perfil = $session->read('Auth.User');
                                 <div class="header-right-info">
                                     <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                         <li class="nav-item dropdown">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                <i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i>
+                                                <span class="indicator-ms"></span>
+                                            </a>
                                             <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
                                                 <div class="message-single-top">
                                                     <h1>Mensagem</h1>
                                                 </div>
                                                 <ul class="message-menu">
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                                                    "controller" => "Users",
+                                                                                    "action" => "mensagens",
+                                                                                    1
+                                                                                ]);?>">
                                                             <div class="message-img">
-                                                                <img src="img/assets/contact/1.jpg" alt="Foto do Perfil do Usuário">
+                                                                <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                             </div>
                                                             <div class="message-content">
-                                                                <span class="message-date">16 Sept</span>
+                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                 <h2>Advanda Cro</h2>
                                                                 <p>Please done this project as soon possible.</p>
                                                             </div>
