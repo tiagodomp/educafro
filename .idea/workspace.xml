@@ -16,6 +16,7 @@
       <file leaf-file-name="admin.ctp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Template/Layout/admin.ctp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="251">
               <caret line="430" column="113" lean-forward="true" selection-start-line="430" selection-start-column="113" selection-end-line="430" selection-end-column="113" />
               <folding>
@@ -29,6 +30,20 @@
                 <marker date="1544469974703" expanded="true" signature="16112:16146" ph="..." />
                 <marker date="1544469974703" expanded="true" signature="17773:17807" ph="..." />
                 <marker date="1544469974703" expanded="true" signature="26789:26854" ph="..." />
+=======
+            <state relative-caret-position="339">
+              <caret line="269" column="36" lean-forward="true" selection-start-line="269" selection-start-column="36" selection-end-line="269" selection-end-column="36" />
+              <folding>
+                <element signature="e#7#96#0#PHP" expanded="true" />
+                <marker date="1544465794764" expanded="true" signature="7742:7776" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="8138:8172" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="9755:9789" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="11383:11417" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="12935:12969" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="14759:14793" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="15841:15875" ph="..." />
+                <marker date="1544465794764" expanded="true" signature="16824:16858" ph="..." />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
               </folding>
             </state>
           </provider>
@@ -146,10 +161,16 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+=======
+    <option name="x" value="605" />
+    <option name="width" value="768" />
+    <option name="height" value="735" />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -267,12 +288,20 @@
       <workItem from="1539778152416" duration="17867000" />
       <workItem from="1544151052307" duration="54000" />
       <workItem from="1544452618723" duration="626000" />
+<<<<<<< HEAD
       <workItem from="1544458018271" duration="10047000" />
+=======
+      <workItem from="1544458018271" duration="5873000" />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="254340000" />
+=======
+    <option name="totallyTimeSpent" value="250166000" />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,8 +314,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -707,6 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Layout/admin.ctp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="251">
           <caret line="430" column="113" lean-forward="true" selection-start-line="430" selection-start-column="113" selection-end-line="430" selection-end-column="113" />
           <folding>
@@ -720,6 +756,20 @@
             <marker date="1544469974703" expanded="true" signature="16112:16146" ph="..." />
             <marker date="1544469974703" expanded="true" signature="17773:17807" ph="..." />
             <marker date="1544469974703" expanded="true" signature="26789:26854" ph="..." />
+=======
+        <state relative-caret-position="339">
+          <caret line="269" column="36" lean-forward="true" selection-start-line="269" selection-start-column="36" selection-end-line="269" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+            <marker date="1544465794764" expanded="true" signature="7742:7776" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="8138:8172" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="9755:9789" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="11383:11417" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="12935:12969" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="14759:14793" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="15841:15875" ph="..." />
+            <marker date="1544465794764" expanded="true" signature="16824:16858" ph="..." />
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
           </folding>
         </state>
       </provider>

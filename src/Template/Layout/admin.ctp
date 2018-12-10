@@ -104,7 +104,10 @@ $perfil = $session->read('Auth.User');
         <div class="sidebar-header">
             <?= echo $this->Html->image("assets/logo/logo-educafro-horizontal-200x60px.png", [
                 "alt" => "Logo Educafro 200x60px",
+<<<<<<< HEAD
                 'class' => 'main-logo',
+=======
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                 'url' => ['controller' => '**************', 'action' => '***********']
             ]) ?>
             <!-- Saída: <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a> -->
@@ -134,11 +137,16 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
 
+<<<<<<< HEAD
                             <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true)?>">
+=======
+                            <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Minhas Demandas</span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
 
+<<<<<<< HEAD
                             <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/timeline', true)?>">
                                 <span class="mini-sub-pro">Linha temporal</span>
                                 </a>
@@ -149,23 +157,44 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true)?>">
+=======
+                            <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/pesquisa/recursiva', true);?>">
+                                <span class="mini-sub-pro">Pesquisa recursiva</span>
+                                </a>
+                            </li>
+
+                            <li><a title="Análise técnica” href="<?= echo $this->Url->build('/analise', true);?>">
+                                <span class="mini-sub-pro">Análise Técnica</span>
+                                </a>
+                            </li>
+                            <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Laboratório de Insights</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true)?>" aria-expanded="false">
+=======
+                        <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true);?>" aria-expanded="false">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                             <span class="mini-click-non">Eventos</span>
                         </a>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
+=======
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true);?>" aria-expanded="false">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non">Professores</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                             <li><a title="Todos profesores" href="<?= echo $this->Url->build('/professores/todos', true)?>">
                                     <span class="mini-sub-pro">Todos Professores</span>
                                 </a>
@@ -179,17 +208,37 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true)?>">
+=======
+                            <li><a title="Todos profesores" href="<?= echo $this->Url->build('/professores/todos', true);?>">
+                                    <span class="mini-sub-pro">Todos Professores</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Professor" href="<?= echo $this->Url->build('/professores/novo', true);?>">
+                                    <span class="mini-sub-pro">Novo Professor</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Professor" href="<?= echo $this->Url->build('/professores/editar', true);?>">
+                                    <span class="mini-sub-pro">Editar Professor</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Professor</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true)?>" aria-expanded="false">
+=======
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true);?>" aria-expanded="false">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non">Voluntários</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                             <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true)?>">
                                     <span class="mini-sub-pro">Todos Voluntários</span>
                                 </a>
@@ -203,17 +252,37 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">
+=======
+                            <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true);?>">
+                                    <span class="mini-sub-pro">Todos Voluntários</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Voluntário" href="<?= echo $this->Url->build('/voluntarios/novo', true);?>">
+                                    <span class="mini-sub-pro">Novo Voluntário</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Voluntários" href="<?= echo $this->Url->build('/voluntarios/editar', true);?>">
+                                    <span class="mini-sub-pro">Editar Voluntários</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Voluntário</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true)?>" aria-expanded="false">
+=======
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true);?>" aria-expanded="false">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-student icon-wrap"></span>
                             <span class="mini-click-non">Alunos</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                             <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true)?>">
                                     <span class="mini-sub-pro">Todos Alunos</span>
                                 </a>
@@ -227,6 +296,21 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true)?>">
+=======
+                            <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true);?>">
+                                    <span class="mini-sub-pro">Todos Alunos</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Aluno" href="<?= echo $this->Url->build('/alunos/novo', true);?>">
+                                    <span class="mini-sub-pro">Novo Aluno</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Aluno" href="<?= echo $this->Url->build('/alunos/editar', true);?>">
+                                    <span class="mini-sub-pro">Editar Aluno</span>
+                                </a>
+                            </li>
+                            <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Aluno</span>
                                 </a>
                             </li>
@@ -238,6 +322,7 @@ $perfil = $session->read('Auth.User');
                             <span class="mini-click-non">Cursos</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                             <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
                                     <span class="mini-sub-pro">Todos os cursos</span>
                                 </a>
@@ -255,17 +340,41 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
+=======
+                            <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true);?>">
+                                    <span class="mini-sub-pro">Todos os cursos</span>
+                                </a>
+                            </li>
+                            <li><a title="Novo Curso" href="<?= echo $this->Url->build('/cursos/novo', true);?>">
+                                    <span class="mini-sub-pro">Novo curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Editar Curso" href="<?= echo $this->Url->build('/cursos/editar', true);?>">
+                                    <span class="mini-sub-pro">Editar curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Ver Curso" href="<?= echo $this->Url->build('/cursos/ver', true);?>">
+                                    <span class="mini-sub-pro">Ver curso</span>
+                                </a>
+                            </li>
+                            <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true);?>">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Análise dos cursos</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true) ?>" aria-expanded="false">
+=======
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true);?>" aria-expanded="false">
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-library icon-wrap"></span>
                             <span class="mini-click-non">Maleta de Ferramentas</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
+<<<<<<< HEAD
                             <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">
                                     <span class="mini-sub-pro">Todas as ferramentas</span>
                                 </a>
@@ -278,6 +387,14 @@ $perfil = $session->read('Auth.User');
                                     <span class="mini-sub-pro">Editar Ferramentas</span>
                                 </a>
                             </li>
+=======
+                            <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todas', true);?>">
+                                    <span class="mini-sub-pro">Todas as ferramentas</span>
+                                </a>
+                            </li>
+                            <li><a title="Nova Ferramenta" href="add-library-assets.html"><span class="mini-sub-pro">Nova Ferramenta</span></a></li>
+                            <li><a title="Editar Ferramentas" href="edit-library-assets.html"><span class="mini-sub-pro">Editar Ferramentas</span></a></li>
+>>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                         </ul>
                     </li>
                     <li>
