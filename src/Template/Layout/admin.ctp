@@ -133,12 +133,10 @@ $perfil = $session->read('Auth.User');
                                     <span class="mini-sub-pro">Feed de Notícias</span>
                                 </a>
                             </li>
-
-                            <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true)?>">
+                            <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true) ?>">
                                     <span class="mini-sub-pro">Minhas Demandas</span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
-
                             <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/timeline', true)?>">
                                 <span class="mini-sub-pro">Linha temporal</span>
                                 </a>
@@ -149,6 +147,7 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true)?>">
+
                                     <span class="mini-sub-pro">Laboratório de Insights</span>
                                 </a>
                             </li>
