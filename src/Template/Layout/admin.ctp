@@ -9,7 +9,7 @@
 $cakeDescription = 'Educafro Descomplica';
 $session = $this->request->getSession();
 $perfil = $session->read('Auth.User');
-
+$countNotas = 2;
 ?>
 
 <?=  echo $this->Html->docType() ?>
@@ -104,10 +104,7 @@ $perfil = $session->read('Auth.User');
         <div class="sidebar-header">
             <?= echo $this->Html->image("assets/logo/logo-educafro-horizontal-200x60px.png", [
                 "alt" => "Logo Educafro 200x60px",
-<<<<<<< HEAD
                 'class' => 'main-logo',
-=======
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                 'url' => ['controller' => '**************', 'action' => '***********']
             ]) ?>
             <!-- Saída: <a href="index.html"><img class="main-logo" src="img/assets/logo/logo-educafro-horizontal-200x60px.png" alt="logo educafro horizontal 200x60px" /></a> -->
@@ -136,17 +133,10 @@ $perfil = $session->read('Auth.User');
                                     <span class="mini-sub-pro">Feed de Notícias</span>
                                 </a>
                             </li>
-
-<<<<<<< HEAD
                             <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true)?>">
-=======
-                            <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Minhas Demandas</span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
-
-<<<<<<< HEAD
                             <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/timeline', true)?>">
                                 <span class="mini-sub-pro">Linha temporal</span>
                                 </a>
@@ -157,39 +147,19 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true)?>">
-=======
-                            <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/pesquisa/recursiva', true);?>">
-                                <span class="mini-sub-pro">Pesquisa recursiva</span>
-                                </a>
-                            </li>
-
-                            <li><a title="Análise técnica” href="<?= echo $this->Url->build('/analise', true);?>">
-                                <span class="mini-sub-pro">Análise Técnica</span>
-                                </a>
-                            </li>
-                            <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Laboratório de Insights</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true)?>" aria-expanded="false">
-=======
-                        <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true);?>" aria-expanded="false">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                             <span class="mini-click-non">Eventos</span>
                         </a>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
-=======
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true);?>" aria-expanded="false">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non">Professores</span>
                         </a>
@@ -208,37 +178,17 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true)?>">
-=======
-                            <li><a title="Todos profesores" href="<?= echo $this->Url->build('/professores/todos', true);?>">
-                                    <span class="mini-sub-pro">Todos Professores</span>
-                                </a>
-                            </li>
-                            <li><a title="Novo Professor" href="<?= echo $this->Url->build('/professores/novo', true);?>">
-                                    <span class="mini-sub-pro">Novo Professor</span>
-                                </a>
-                            </li>
-                            <li><a title="Editar Professor" href="<?= echo $this->Url->build('/professores/editar', true);?>">
-                                    <span class="mini-sub-pro">Editar Professor</span>
-                                </a>
-                            </li>
-                            <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Professor</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true)?>" aria-expanded="false">
-=======
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true);?>" aria-expanded="false">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non">Voluntários</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-<<<<<<< HEAD
                             <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true)?>">
                                     <span class="mini-sub-pro">Todos Voluntários</span>
                                 </a>
@@ -252,37 +202,17 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">
-=======
-                            <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true);?>">
-                                    <span class="mini-sub-pro">Todos Voluntários</span>
-                                </a>
-                            </li>
-                            <li><a title="Novo Voluntário" href="<?= echo $this->Url->build('/voluntarios/novo', true);?>">
-                                    <span class="mini-sub-pro">Novo Voluntário</span>
-                                </a>
-                            </li>
-                            <li><a title="Editar Voluntários" href="<?= echo $this->Url->build('/voluntarios/editar', true);?>">
-                                    <span class="mini-sub-pro">Editar Voluntários</span>
-                                </a>
-                            </li>
-                            <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Voluntário</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true)?>" aria-expanded="false">
-=======
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true);?>" aria-expanded="false">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-student icon-wrap"></span>
                             <span class="mini-click-non">Alunos</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-<<<<<<< HEAD
                             <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true)?>">
                                     <span class="mini-sub-pro">Todos Alunos</span>
                                 </a>
@@ -296,21 +226,6 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true)?>">
-=======
-                            <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true);?>">
-                                    <span class="mini-sub-pro">Todos Alunos</span>
-                                </a>
-                            </li>
-                            <li><a title="Novo Aluno" href="<?= echo $this->Url->build('/alunos/novo', true);?>">
-                                    <span class="mini-sub-pro">Novo Aluno</span>
-                                </a>
-                            </li>
-                            <li><a title="Editar Aluno" href="<?= echo $this->Url->build('/alunos/editar', true);?>">
-                                    <span class="mini-sub-pro">Editar Aluno</span>
-                                </a>
-                            </li>
-                            <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Perfil do Aluno</span>
                                 </a>
                             </li>
@@ -322,7 +237,6 @@ $perfil = $session->read('Auth.User');
                             <span class="mini-click-non">Cursos</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-<<<<<<< HEAD
                             <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
                                     <span class="mini-sub-pro">Todos os cursos</span>
                                 </a>
@@ -340,41 +254,17 @@ $perfil = $session->read('Auth.User');
                                 </a>
                             </li>
                             <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
-=======
-                            <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true);?>">
-                                    <span class="mini-sub-pro">Todos os cursos</span>
-                                </a>
-                            </li>
-                            <li><a title="Novo Curso" href="<?= echo $this->Url->build('/cursos/novo', true);?>">
-                                    <span class="mini-sub-pro">Novo curso</span>
-                                </a>
-                            </li>
-                            <li><a title="Editar Curso" href="<?= echo $this->Url->build('/cursos/editar', true);?>">
-                                    <span class="mini-sub-pro">Editar curso</span>
-                                </a>
-                            </li>
-                            <li><a title="Ver Curso" href="<?= echo $this->Url->build('/cursos/ver', true);?>">
-                                    <span class="mini-sub-pro">Ver curso</span>
-                                </a>
-                            </li>
-                            <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true);?>">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                                     <span class="mini-sub-pro">Análise dos cursos</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true) ?>" aria-expanded="false">
-=======
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true);?>" aria-expanded="false">
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                             <span class="educate-icon educate-library icon-wrap"></span>
                             <span class="mini-click-non">Maleta de Ferramentas</span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-<<<<<<< HEAD
                             <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">
                                     <span class="mini-sub-pro">Todas as ferramentas</span>
                                 </a>
@@ -387,14 +277,6 @@ $perfil = $session->read('Auth.User');
                                     <span class="mini-sub-pro">Editar Ferramentas</span>
                                 </a>
                             </li>
-=======
-                            <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todas', true);?>">
-                                    <span class="mini-sub-pro">Todas as ferramentas</span>
-                                </a>
-                            </li>
-                            <li><a title="Nova Ferramenta" href="add-library-assets.html"><span class="mini-sub-pro">Nova Ferramenta</span></a></li>
-                            <li><a title="Editar Ferramentas" href="edit-library-assets.html"><span class="mini-sub-pro">Editar Ferramentas</span></a></li>
->>>>>>> d48bc07354b5b5ce61c955b55cca9cc669bf4319
                         </ul>
                     </li>
                     <li>
@@ -544,129 +426,165 @@ $perfil = $session->read('Auth.User');
                                                             </div>
                                                             <div class="message-content">
                                                                 <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2>Advanda Cro</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "mensagens",
+                                                            1
+                                                        ]);?>">
                                                             <div class="message-img">
-                                                                <img src="img/assets/contact/4.jpg" alt="">
+                                                                <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                             </div>
                                                             <div class="message-content">
-                                                                <span class="message-date">16 Sept</span>
-                                                                <h2>Sulaiman din</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "mensagens",
+                                                            1
+                                                        ]);?>">
                                                             <div class="message-img">
-                                                                <img src="img/assets/contact/3.jpg" alt="">
+                                                                <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                             </div>
                                                             <div class="message-content">
-                                                                <span class="message-date">16 Sept</span>
-                                                                <h2>Victor Jara</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "mensagens",
+                                                            1
+                                                        ]);?>">
                                                             <div class="message-img">
-                                                                <img src="img/assets/contact/2.jpg" alt="">
+                                                                <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                             </div>
                                                             <div class="message-content">
-                                                                <span class="message-date">16 Sept</span>
-                                                                <h2>Victor Jara</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
                                                             </div>
                                                         </a>
                                                     </li>
-                                                </ul>
                                                 <div class="message-view">
-                                                    <a href="#">Ver todas mensagens </a>
+                                                    <a href="<?= echo $this->Url->build('/mensagens', true) ?>">Ver todas mensagens </a>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                        <li class="nav-item">
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                <i class="educate-icon educate-bell" aria-hidden="true"></i>
+                                                <span class="indicator-nt"></span>
+                                            </a>
                                             <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                 <div class="notification-single-top">
                                                     <h1>Notificações</h1>
                                                 </div>
                                                 <ul class="notification-menu">
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "notificacoes",
+                                                            1
+                                                        ]);?>">
                                                             <div class="notification-icon">
                                                                 <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="notification-content">
-                                                                <span class="notification-date">16 Sept</span>
-                                                                <h2>Advanda Cro</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Falta 3 dias para a reunião com o diretor</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "notificacoes",
+                                                            1
+                                                        ]);?>">
                                                             <div class="notification-icon">
-                                                                <i class="fa fa-cloud edu-cloud-computing-down" aria-hidden="true"></i>
+                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="notification-content">
-                                                                <span class="notification-date">16 Sept</span>
-                                                                <h2>Sulaiman din</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Falta 2 dias para expirar a entrega da demanda</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "notificacoes",
+                                                            1
+                                                        ]);?>">
                                                             <div class="notification-icon">
-                                                                <i class="fa fa-eraser edu-shield" aria-hidden="true"></i>
+                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="notification-content">
-                                                                <span class="notification-date">16 Sept</span>
-                                                                <h2>Victor Jara</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Falta 3 dias para a reunião com o diretor</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="<?= echo $this->Url->build([
+                                                            "controller" => "Users",
+                                                            "action" => "notificacoes",
+                                                            1
+                                                        ]);?>">
                                                             <div class="notification-icon">
-                                                                <i class="fa fa-line-chart edu-analytics-arrow" aria-hidden="true"></i>
+                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="notification-content">
-                                                                <span class="notification-date">16 Sept</span>
-                                                                <h2>Victor Jara</h2>
-                                                                <p>Please done this project as soon possible.</p>
+                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                <h2><?php echo $perfil['username']; ?></h2>
+                                                                <p>Falta 2 dias para expirar a entrega da demanda</p>
                                                             </div>
                                                         </a>
                                                     </li>
                                                 </ul>
                                                 <div class="notification-view">
-                                                    <a href="#">Ver todas notificações</a>
+                                                    <a href="<?= echo $this->Url->build('/user/notificacoes', true) ?>">Ver todas notificações</a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                <img src="img/assets/product/pro4.jpg" alt="" />
+                                                <?= echo $this->Html->image('assets/product/pro4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                 <span class="admin-name"><b class="">Prof.</b> Angelina</span>
                                                 <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>Minha Conta</a>
+                                                <li><a href="<?= echo $this->Url->build('/user/cadastro', true) ?>">
+                                                        <span class="edu-icon edu-home-admin author-log-ic"></span>Minha Conta</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>Meu Perfil</a>
+                                                <li><a href="<?= echo $this->Url->build('/perfil/editar', true) ?>">
+                                                        <span class="edu-icon edu-user-rounded author-log-ic"></span>Meu Perfil</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>Meu Faturamento</a>
+                                                <li><a href="<?= echo $this->Url->build('/user/faturas', true) ?>">
+                                                        <span class="edu-icon edu-money author-log-ic"></span>Meu Faturamento</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Configurações</a>
+                                                <li><a href="<?= echo $this->Url->build('/perfil/configuracoes', true) ?>">
+                                                        <span class="edu-icon edu-settings author-log-ic"></span>Configurações</a>
                                                 </li>
-                                                <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Sair</a>
+                                                <li><a href="<?= echo $this->Url->build('/user/logout', true) ?>">
+                                                        <span class="edu-icon edu-locked author-log-ic"></span>Sair</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -687,19 +605,46 @@ $perfil = $session->read('Auth.User');
                                                         <div class="notes-area-wrap">
                                                             <div class="note-heading-indicate">
                                                                 <h2><i class="fa fa-comments-o"></i>Últimas Notas</h2>
-                                                                <p>Você tem 10 novas mensagens</p>
+                                                                <p><?php if($countNotas >= 1){
+                                                                            echo 'Você possui ' . $countNotas . ' novas notificações!';
+                                                                        }else{
+                                                                            echo "Sua caixa de notificações esta limpa!";
+                                                                        }
+                                                                    ?>
+                                                                </p>
                                                             </div>
                                                             <div class="notes-list-area notes-menu-scrollbar">
                                                                 <ul class="notes-menu-list">
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/4.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
+                                                                            <div class="notes-list-flow">
+                                                                                <div class="notes-img">
+                                                                                    <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
+                                                                                </div>
+                                                                                <div class="notes-content">
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
@@ -708,115 +653,130 @@ $perfil = $session->read('Auth.User');
                                                                         <a href="#">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/1.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/2.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/3.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/4.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/1.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/2.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/1.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "perfil",
+                                                                            "action" => "notas",
+                                                                            1
+                                                                        ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <img src="img/assets/contact/2.jpg" alt="" />
+                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <img src="img/assets/contact/3.jpg" alt="" />
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-                                                                                    <span>Yesterday 2:45 pm</span>
+                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
+                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
