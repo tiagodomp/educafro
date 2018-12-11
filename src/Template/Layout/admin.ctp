@@ -1228,6 +1228,43 @@ $countNotas = 2;
 </div>
 </div>
 
+<script>
+    //Código para verificar e/ou solcitar permissão de notificações no google chrome
+    document.addEventListenner('DOMContentLoaded', function (){
+        if (!Notification) {
+            alert('Seu browser não tem suporte para exibir Notificações. Instale o Google Chrome.');
+            return;
+        }
+
+        if (Notification.permission !== "granted")
+            Notification.requestPermission();
+    });
+
+    function notificacaoUsuario(){
+        if (Notification.permission !== "granted"){
+            Notification.requestPermission();
+        }else{
+            //Variáveis para compor o corpo da notificação
+            var titleNotification = "titulo da Notificação com teste de tamanho de caracteres";
+            var urlIconNotification = "https://www.educafro.org.br/site/wp-content/uploads/2015/01/logo_educafro_pequeno-1.png";
+            var bodyNotification = "Viado foi quem leu esse texto teste de tamanho de caracteresteste de tamanho de caracteresteste de tamanho de caracteresteste de tamanho de caracteres";
+            var urlRedirectNotification = "https://www.google.com.br";
+
+            var notificacao = new Notification(tituloNotificacao, {
+                icon : urlIconNotificacao,
+                body : bodyNotificacao
+            });
+
+            notificacao.onclick = function(){
+                window.open(urlRedirectNotification);
+            }
+        }
+    }
+
+notificacaoUsuario();
+
+</script>
+
 <!-- jquery
     ============================================ -->
 <?= $this->Html->script('assets/vendor/jquery-1.12.4.min.js') ?>
