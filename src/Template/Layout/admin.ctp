@@ -797,7 +797,7 @@ $countNotas = 2;
                                                                         <a href="#">
                                                                             <div class="project-list-flow">
                                                                                 <div class="projects-st-heading">
-                                                                                    <h2>Web Development</h2>
+                                                                                    <h2>Desenvolvimento WEB</h2>
                                                                                     <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
                                                                                     <span class="project-st-time">1 hours ago</span>
                                                                                 </div>
