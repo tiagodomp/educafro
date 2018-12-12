@@ -120,7 +120,7 @@ $countNotas = 2;
             <nav class="sidebar-nav left-sidebar-menu-pro">
                 <ul class="metismenu" id="menu1">
                     <li class="active">
-                        <a class="has-arrow" href="index.html">
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/home', true) ?>">
                             <span class="educate-icon educate-home icon-wrap"></span>
                             <span class="mini-click-non">Educafro</span>
                         </a>
@@ -615,172 +615,25 @@ $countNotas = 2;
                                                             </div>
                                                             <div class="notes-list-area notes-menu-scrollbar">
                                                                 <ul class="notes-menu-list">
+                                                                    <?php foreach ($notas as $nota): ?>
                                                                     <li>
                                                                         <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
+                                                                            "controller" => "notas",
+                                                                            "action" => "ultimos",
+                                                                            $nota->id
                                                                         ]);?>">
                                                                             <div class="notes-list-flow">
                                                                                 <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
+                                                                                    <?= echo $this->Html->image($nota->img, ['alt' => 'Foto do Perfil do Usuário']) ?>
                                                                                 </div>
                                                                                 <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
+                                                                                    <p><?= h($nota->descricao) ?></p>
+                                                                                    <span><?= h($nota->dataEmitida) ?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="<?= echo $this->Url->build([
-                                                                            "controller" => "perfil",
-                                                                            "action" => "notas",
-                                                                            1
-                                                                        ]);?>">
-                                                                            <div class="notes-list-flow">
-                                                                                <div class="notes-img">
-                                                                                    <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                                                </div>
-                                                                                <div class="notes-content">
-                                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices.</p>
-                                                                                    <span><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
+                                                                    <?php endforeach; ?>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -793,150 +646,45 @@ $countNotas = 2;
                                                             </div>
                                                             <div class="project-st-list-area project-st-menu-scrollbar">
                                                                 <ul class="projects-st-menu-list">
+                                                                    <?php foreach ($demandas as $demanda): ?>
                                                                     <li>
-                                                                        <a href="#">
+                                                                            <script>
+                                                                                /*
+                                                                                var i = 1;
+                                                                                var clas = 'hd-tp-';
+                                                                                var remv =  clas.concat(i);
+
+                                                                                for(i; i<=5; i++) {
+                                                                                    var add = clas.concat(i);
+                                                                                    var el = document.getElementById("progressoDemanda");
+
+                                                                                }
+                                                                                el.classList.remove(remv);
+                                                                                el.classList.add(add);
+                                                                                */
+                                                                            </script>
+                                                                        <a href="<?= echo $this->Url->build([
+                                                                            "controller" => "demandas",
+                                                                            "action" => "ultimas",
+                                                                            $demanda->id
+                                                                        ]);?>">
                                                                             <div class="project-list-flow">
                                                                                 <div class="projects-st-heading">
-                                                                                    <h2>Desenvolvimento WEB</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">1 hours ago</span>
+                                                                                    <h2><?= h($demanda->titulo) ?></h2>
+                                                                                    <p><?= h($demanda->descricao) ?></p>
+                                                                                    <span class="project-st-time"><?= h($demanda->timeProgressivo) ?></span>
                                                                                 </div>
                                                                                 <div class="projects-st-content">
-                                                                                    <p>Completion with: 28%</p>
+                                                                                    <p><?= h($demanda->concluidoPorcentagem) ?></p>
                                                                                     <div class="progress progress-mini">
-                                                                                        <div style="width: 28%;" class="progress-bar progress-bar-danger hd-tp-1"></div>
+                                                                                        <div style="width: 28%;" id="progressoDemanda" class="progress-bar progress-bar-danger hd-tp-1"></div>
                                                                                     </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
+                                                                                    <p><?= h($demanda->dataEntrega) ?></p>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Software Development</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">2 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content project-rating-cl">
-                                                                                    <p>Completion with: 68%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 68%;" class="progress-bar hd-tp-2"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Graphic Design</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">3 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content">
-                                                                                    <p>Completion with: 78%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 78%;" class="progress-bar hd-tp-3"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Web Design</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">4 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content project-rating-cl2">
-                                                                                    <p>Completion with: 38%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 38%;" class="progress-bar progress-bar-danger hd-tp-4"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Business Card</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">5 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content">
-                                                                                    <p>Completion with: 28%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 28%;" class="progress-bar progress-bar-danger hd-tp-5"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Ecommerce Business</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">6 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content project-rating-cl">
-                                                                                    <p>Completion with: 68%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 68%;" class="progress-bar hd-tp-6"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Woocommerce Plugin</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">7 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content">
-                                                                                    <p>Completion with: 78%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 78%;" class="progress-bar"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <div class="project-list-flow">
-                                                                                <div class="projects-st-heading">
-                                                                                    <h2>Wordpress Theme</h2>
-                                                                                    <p> The point of using Lorem Ipsum is that it has a more or less normal.</p>
-                                                                                    <span class="project-st-time">9 hours ago</span>
-                                                                                </div>
-                                                                                <div class="projects-st-content project-rating-cl2">
-                                                                                    <p>Completion with: 38%</p>
-                                                                                    <div class="progress progress-mini">
-                                                                                        <div style="width: 38%;" class="progress-bar progress-bar-danger"></div>
-                                                                                    </div>
-                                                                                    <p>Project end: 4:00 pm - 12.06.2014</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
+                                                                    <?php endforeach; ?>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -951,7 +699,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Show notifications</h2>
+                                                                            <h2>Exibir notificações</h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
@@ -967,7 +715,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Disable Chat</h2>
+                                                                            <h2>Disabilitar chat</h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
@@ -983,7 +731,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Enable history</h2>
+                                                                            <h2>Lembrar dos meus compromissos</h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
@@ -999,7 +747,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Show charts</h2>
+                                                                            <h2>Trabalhar Ofline</h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
@@ -1047,7 +795,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Offline users</h2>
+                                                                            <h2>Pesquisar Offline</h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
@@ -1086,93 +834,97 @@ $countNotas = 2;
                             <ul class="mobile-menu-nav">
                                 <li><a data-toggle="collapse" data-target="#Charts" href="#">Educafro<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Feed de Notícias</a></li>
-                                        <li><a href="index-1.html">Minhas Demandas</a></li>
-                                        <li><a href="index-3.html">Pesquisa Recursiva</a></li>
-                                        <li><a href="analytics.html">Análise Técnica</a></li>
-                                        <li><a href="widgets.html">Laboratório de Insights</a></li>
+                                        <li><a href="<?= echo $this->Url->build([
+                                                "controller" => "*********",
+                                                "action" => "*********",
+                                                "fullbase" => true
+                                            ]) ?>">Feed de Notícias</a></li>
+                                        <li><a href="<?= echo $this->Url->build('/user/demandas', true)?>">Minhas Demandas</a></li>
+                                        <li><a href="<?= echo $this->Url->build('/timeline', true)?>">Linha Temporal</a></li>
+                                        <li><a href="<?= echo $this->Url->build('/analise', true)?>">Análise Técnica</a></li>
+                                        <li><a href="<?= echo $this->Url->build('/insights', true)?>">Laboratório de Insights</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="events.html">Eventos</a></li>
+                                <li><a href="<?= echo $this->Url->build('/eventos', true)?>">Eventos</a></li>
                                 <li><a data-toggle="collapse" data-target="#demoevent" href="#">Professores <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="all-professors.html">Todos Professores</a>
+                                        <li><a href="<?= echo $this->Url->build('/professores/todos', true)?>">Todos Professores</a>
                                         </li>
-                                        <li><a href="add-professor.html">Novo Professor</a>
+                                        <li><a href="<?= echo $this->Url->build('/professores/novo', true)?>">Novo Professor</a>
                                         </li>
-                                        <li><a href="edit-professor.html">Editar Professor</a>
+                                        <li><a href="<?= echo $this->Url->build('/professores/editar', true)?>">Editar Professor</a>
                                         </li>
-                                        <li><a href="professor-profile.html">Perfil do Professor</a>
+                                        <li><a href="<?= echo $this->Url->build('/professores/perfil', true)?>">Perfil do Professor</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demopro" href="#">Voluntários <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demopro" class="collapse dropdown-header-top">
-                                        <li><a href="all-students.html">Todos Voluntários</a>
+                                        <li><a href="<?= echo $this->Url->build('/voluntarios/todos', true)?>">Todos Voluntários</a>
                                         </li>
-                                        <li><a href="add-student.html">Novo Voluntário</a>
+                                        <li><a href="<?= echo $this->Url->build('/voluntarios/novo', true)?>">Novo Voluntário</a>
                                         </li>
-                                        <li><a href="edit-student.html">Editar Voluntário</a>
+                                        <li><a href="<?= echo $this->Url->build('/voluntarios/editar', true)?>">Editar Voluntário</a>
                                         </li>
-                                        <li><a href="student-profile.html">Perfil do Voluntário</a>
+                                        <li><a href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">Perfil do Voluntário</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demopro" href="#">Alunos<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demopro" class="collapse dropdown-header-top">
-                                        <li><a href="all-students.html">Todos Alunos</a>
+                                        <li><a href="<?= echo $this->Url->build('/alunos/todos', true)?>">Todos Alunos</a>
                                         </li>
-                                        <li><a href="add-student.html">Novo Aluno</a>
+                                        <li><a href="<?= echo $this->Url->build('/alunos/novo', true)?>">Novo Aluno</a>
                                         </li>
-                                        <li><a href="edit-student.html">Editar Aluno</a>
+                                        <li><a href="<?= echo $this->Url->build('/alunos/editar', true)?>">Editar Aluno</a>
                                         </li>
-                                        <li><a href="student-profile.html">Perfil do Aluno</a>
+                                        <li><a href="<?= echo $this->Url->build('/alunos/perfil', true)?>">Perfil do Aluno</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#democrou" href="#">Cursos<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="democrou" class="collapse dropdown-header-top">
-                                        <li><a href="all-courses.html">Todos os Cursos</a>
+                                        <li><a href="<?= echo $this->Url->build('/cursos/todos', true)?>">Todos os Cursos</a>
                                         </li>
-                                        <li><a href="add-course.html">Novo Curso</a>
+                                        <li><a href="<?= echo $this->Url->build('/cursos/novo', true)?>">Novo Curso</a>
                                         </li>
-                                        <li><a href="edit-course.html">Editar Curso</a>
+                                        <li><a href="<?= echo $this->Url->build('/cursos/editar', true)?>">Editar Curso</a>
                                         </li>
-                                        <li><a href="course-profile.html">Ver Curso</a>
+                                        <li><a href="<?= echo $this->Url->build('/cursos/perfil', true) ?>">Ver Curso</a>
                                         </li>
-                                        <li><a href="course-payment.html">Análise dos cursos</a>
+                                        <li><a href="<?= echo $this->Url->build('/cursos/analise', true) ?>">Análise dos cursos</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a data-toggle="collapse" data-target="#demolibra" href="#">Library <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                <li><a data-toggle="collapse" data-target="#demolibra" href="#">Maleta de ferramentas<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demolibra" class="collapse dropdown-header-top">
-                                        <li><a href="library-assets.html">Library Assets</a>
+                                        <li><a href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">Todas ferramentas</a>
                                         </li>
-                                        <li><a href="add-library-assets.html">Add Library Asset</a>
+                                        <li><a href="<?= echo $this->Url->build('/ferramentas/novo', true) ?>">Nova ferramenta</a>
                                         </li>
-                                        <li><a href="edit-library-assets.html">Edit Library Asset</a>
+                                        <li><a href="<?= echo $this->Url->build('/ferramentas/editar', true) ?>">Editar ferramentas</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demodepart" href="#">Departamentos <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demodepart" class="collapse dropdown-header-top">
-                                        <li><a href="departments.html">Lista de Departamentos</a>
+                                        <li><a href="<?= echo $this->Url->build('/departamentos/todos', true) ?>">Lista de Departamentos</a>
                                         </li>
-                                        <li><a href="add-department.html">Criar Departamento</a>
+                                        <li><a href="<?= echo $this->Url->build('/departamentos/novo', true) ?>">Criar Departamento</a>
                                         </li>
-                                        <li><a href="edit-department.html">Editar Departamento</a>
+                                        <li><a href="<?= echo $this->Url->build('/departamentos/editar', true) ?>">Editar Departamento</a>
                                         </li>
-                                        <li><a href="edit-department.html">Análise Departamental</a>
+                                        <li><a href="<?= echo $this->Url->build('/departamentos/analise', true) ?>">Análise Departamental</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demo" href="#">Caixa de Mensagens <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                     <ul id="demo" class="collapse dropdown-header-top">
-                                        <li><a href="mailbox.html">Recentes </a>
+                                        <li><a href="<?= echo $this->Url->build('/mensagens/recentes', true) ?>">Recentes </a>
                                         </li>
-                                        <li><a href="mailbox-view.html">Solicitações de mensagens </a>
+                                        <li><a href="<?= echo $this->Url->build('/mensagens/solicitacoes', true) ?>">Solicitações de mensagens </a>
                                         </li>
-                                        <li><a href="mailbox-compose.html">Novo Grupo </a>
+                                        <li><a href="<?= echo $this->Url->build('/mensagens/grupo/novo', true) ?>">Novo Grupo </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -1200,7 +952,7 @@ $countNotas = 2;
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <ul class="breadcome-menu">
-                                    <li><a href="#">Educafro</a> <span class="bread-slash">/</span>
+                                    <li><a href="<?= echo $this->Url->build('/home', true) ?>">Educafro</a> <span class="bread-slash">/</span>
                                     </li>
                                     <li><span class="bread-blod">Feed de Notícias</span>
                                     </li>
@@ -1250,9 +1002,9 @@ $countNotas = 2;
             var bodyNotification = "Viado foi quem leu esse texto teste de tamanho de caracteresteste de tamanho de caracteresteste de tamanho de caracteresteste de tamanho de caracteres";
             var urlRedirectNotification = "https://www.google.com.br";
 
-            var notificacao = new Notification(tituloNotificacao, {
-                icon : urlIconNotificacao,
-                body : bodyNotificacao
+            var notificacao = new Notification(tituloNotification, {
+                icon : urlIconNotification,
+                body : bodyNotification
             });
 
             notificacao.onclick = function(){
