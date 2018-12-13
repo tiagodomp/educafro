@@ -122,7 +122,7 @@ $countNotas = 2;
                     <li class="active">
                         <a class="has-arrow" href="<?= echo $this->Url->build('/home', true) ?>">
                             <span class="educate-icon educate-home icon-wrap"></span>
-                            <span class="mini-click-non">Educafro</span>
+                            <span class="mini-click-non"><?= __('Educafro') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="true">
                             <li><a title="Feed Noticias" href="<?= echo $this->Url->build([
@@ -130,24 +130,24 @@ $countNotas = 2;
                                                                     "action" => "*********",
                                                                     "fullbase" => true
                                                                 ]) ?>">
-                                    <span class="mini-sub-pro">Feed de Notícias</span>
+                                    <span class="mini-sub-pro"><?= __('Feed de Notícias') ?></span>
                                 </a>
                             </li>
                             <li><a title="Minhas Demandas" href="<?= echo $this->Url->build('/user/demandas', true)?>">
-                                    <span class="mini-sub-pro">Minhas Demandas</span> <!-- saida: http://dominio.com/user/demandas -->
+                                    <span class="mini-sub-pro"><?= __('Minhas Demandas') ?></span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
                             <li><a title="pesquisa recursiva” href="<?= echo $this->Url->build('/timeline', true)?>">
-                                <span class="mini-sub-pro">Linha temporal</span>
+                                <span class="mini-sub-pro"><?= __('Linha temporal') ?></span>
                                 </a>
                             </li>
 
                             <li><a title="Análise técnica” href="<?= echo $this->Url->build('/analise', true)?>">
-                                <span class="mini-sub-pro">Análise Técnica</span>
+                                <span class="mini-sub-pro"><?= __('Análise Técnica') ?></span>
                                 </a>
                             </li>
                             <li><a title="laboratório de Insights" href="<?= echo $this->Url->build('/insights', true)?>">
-                                    <span class="mini-sub-pro">Laboratório de Insights</span>
+                                    <span class="mini-sub-pro"><?= __('Laboratório de Insights') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -155,30 +155,30 @@ $countNotas = 2;
                     <li>
                         <a title="Landing Page" href="<?= echo $this->Url->build('/eventos', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
-                            <span class="mini-click-non">Eventos</span>
+                            <span class="mini-click-non"><?= __('Eventos') ?></span>
                         </a>
                     </li>
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-professor icon-wrap"></span>
-                            <span class="mini-click-non">Professores</span>
+                            <span class="mini-click-non"><?= __('Professores') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
 <<<<<<< HEAD
                             <li><a title="Todos profesores" href="<?= echo $this->Url->build('/professores/todos', true)?>">
-                                    <span class="mini-sub-pro">Todos Professores</span>
+                                    <span class="mini-sub-pro"><?= __('Todos Professores') ?></span>
                                 </a>
                             </li>
                             <li><a title="Novo Professor" href="<?= echo $this->Url->build('/professores/novo', true)?>">
-                                    <span class="mini-sub-pro">Novo Professor</span>
+                                    <span class="mini-sub-pro"><?= __('Novo Professor') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Professor" href="<?= echo $this->Url->build('/professores/editar', true)?>">
-                                    <span class="mini-sub-pro">Editar Professor</span>
+                                    <span class="mini-sub-pro"><?= __('Editar Professor') ?></span>
                                 </a>
                             </li>
                             <li><a title="Perfil do Professor" href="<?= echo $this->Url->build('/professores/perfil', true)?>">
-                                    <span class="mini-sub-pro">Perfil do Professor</span>
+                                    <span class="mini-sub-pro"><?= __('Perfil do Professor') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -186,23 +186,23 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-professor icon-wrap"></span>
-                            <span class="mini-click-non">Voluntários</span>
+                            <span class="mini-click-non"><?= __('Voluntários') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todos Voluntários" href="<?= echo $this->Url->build('/voluntarios/todos', true)?>">
-                                    <span class="mini-sub-pro">Todos Voluntários</span>
+                                    <span class="mini-sub-pro"><?= __('Todos Voluntários') ?></span>
                                 </a>
                             </li>
                             <li><a title="Novo Voluntário" href="<?= echo $this->Url->build('/voluntarios/novo', true)?>">
-                                    <span class="mini-sub-pro">Novo Voluntário</span>
+                                    <span class="mini-sub-pro"><?= __('Novo Voluntário') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Voluntários" href="<?= echo $this->Url->build('/voluntarios/editar', true)?>">
-                                    <span class="mini-sub-pro">Editar Voluntários</span>
+                                    <span class="mini-sub-pro"><?= __('Editar Voluntários') ?></span>
                                 </a>
                             </li>
                             <li><a title="Perfil dos Voluntários" href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">
-                                    <span class="mini-sub-pro">Perfil do Voluntário</span>
+                                    <span class="mini-sub-pro"><?= __('Perfil do Voluntário') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -210,23 +210,23 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-student icon-wrap"></span>
-                            <span class="mini-click-non">Alunos</span>
+                            <span class="mini-click-non"><?= __('Alunos') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todos Alunos" href="<?= echo $this->Url->build('/alunos/todos', true)?>">
-                                    <span class="mini-sub-pro">Todos Alunos</span>
+                                    <span class="mini-sub-pro"><?= __('Todos Alunos') ?></span>
                                 </a>
                             </li>
                             <li><a title="Novo Aluno" href="<?= echo $this->Url->build('/alunos/novo', true)?>">
-                                    <span class="mini-sub-pro">Novo Aluno</span>
+                                    <span class="mini-sub-pro"><?= __('Novo Aluno') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Aluno" href="<?= echo $this->Url->build('/alunos/editar', true)?>">
-                                    <span class="mini-sub-pro">Editar Aluno</span>
+                                    <span class="mini-sub-pro"><?= __('Editar Aluno') ?></span>
                                 </a>
                             </li>
                             <li><a title="Perfil do Aluno" href="<?= echo $this->Url->build('/alunos/perfil', true)?>">
-                                    <span class="mini-sub-pro">Perfil do Aluno</span>
+                                    <span class="mini-sub-pro"><?= __('Perfil do Aluno') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -234,27 +234,27 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/cursos', true);?>" aria-expanded="false">
                             <span class="educate-icon educate-course icon-wrap"></span>
-                            <span class="mini-click-non">Cursos</span>
+                            <span class="mini-click-non"><?= __('Cursos') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todos os cursos" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
-                                    <span class="mini-sub-pro">Todos os cursos</span>
+                                    <span class="mini-sub-pro"><?= __('Todos os cursos') ?></span>
                                 </a>
                             </li>
                             <li><a title="Novo Curso" href="<?= echo $this->Url->build('/cursos/novo', true)?>">
-                                    <span class="mini-sub-pro">Novo curso</span>
+                                    <span class="mini-sub-pro"><?= __('Novo curso') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Curso" href="<?= echo $this->Url->build('/cursos/editar', true)?>">
-                                    <span class="mini-sub-pro">Editar curso</span>
+                                    <span class="mini-sub-pro"><?= __('Editar curso') ?></span>
                                 </a>
                             </li>
                             <li><a title="Ver Curso" href="<?= echo $this->Url->build('/cursos/perfil', true) ?>">
-                                    <span class="mini-sub-pro">Ver curso</span>
+                                    <span class="mini-sub-pro"><?= __('Ver curso') ?></span>
                                 </a>
                             </li>
                             <li><a title="Product Payment" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
-                                    <span class="mini-sub-pro">Análise dos cursos</span>
+                                    <span class="mini-sub-pro"><?= __('Análise dos cursos') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -262,19 +262,19 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true) ?>" aria-expanded="false">
                             <span class="educate-icon educate-library icon-wrap"></span>
-                            <span class="mini-click-non">Maleta de Ferramentas</span>
+                            <span class="mini-click-non"><?= __('Maleta de Ferramentas') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Todas as ferramentas" href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">
-                                    <span class="mini-sub-pro">Todas as ferramentas</span>
+                                    <span class="mini-sub-pro"><?= __('Todas as ferramentas') ?></span>
                                 </a>
                             </li>
                             <li><a title="Nova Ferramenta" href="<?= echo $this->Url->build('/ferramentas/novo', true) ?>">
-                                    <span class="mini-sub-pro">Nova Ferramenta</span>
+                                    <span class="mini-sub-pro"><?= __('Nova Ferramenta') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Ferramentas" href="<?= echo $this->Url->build('/ferramentas/editar', true) ?>">
-                                    <span class="mini-sub-pro">Editar Ferramentas</span>
+                                    <span class="mini-sub-pro"><?= __('Editar Ferramentas') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -282,23 +282,23 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/departamentos', true) ?>" aria-expanded="false">
                             <span class="educate-icon educate-department icon-wrap"></span>
-                            <span class="mini-click-non">Departamentos</span>
+                            <span class="mini-click-non"><?= __('Departamentos') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Lista de Departamentos" href="<?= echo $this->Url->build('/departamentos/todos', true) ?>">
-                                    <span class="mini-sub-pro">Lista de Departamentos</span>
+                                    <span class="mini-sub-pro"><?= __('Lista de Departamentos') ?></span>
                                 </a>
                             </li>
                             <li><a title="Criar Departamento" href="<?= echo $this->Url->build('/departamentos/novo', true) ?>">
-                                    <span class="mini-sub-pro">Criar Departamento</span>
+                                    <span class="mini-sub-pro"><?= __('Criar Departamento') ?></span>
                                 </a>
                             </li>
                             <li><a title="Editar Departamentos" href="<?= echo $this->Url->build('/departamentos/editar', true) ?>">
-                                    <span class="mini-sub-pro">Editar Departamento</span>
+                                    <span class="mini-sub-pro"><?= __('Editar Departamento') ?></span>
                                 </a>
                             </li>
                             <li><a title="Análise Departamental" href="<?= echo $this->Url->build('/departamentos/analise', true) ?>">
-                                    <span class="mini-sub-pro">Análise Departamental</span>
+                                    <span class="mini-sub-pro"><?= __('Análise Departamental') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -306,19 +306,19 @@ $countNotas = 2;
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/mensagens', true) ?>" aria-expanded="false">
                             <span class="educate-icon educate-message icon-wrap"></span>
-                            <span class="mini-click-non">Caixa de Mensagens</span>
+                            <span class="mini-click-non"><?= __('Caixa de Mensagens') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Recentes" href="<?= echo $this->Url->build('/mensagens/recentes', true) ?>">
-                                    <span class="mini-sub-pro">Recentes</span>
+                                    <span class="mini-sub-pro"><?= __('Recentes') ?></span>
                                 </a>
                             </li>
                             <li><a title="Solicitações de mensagens" href="<?= echo $this->Url->build('/mensagens/solicitacoes', true) ?>">
-                                    <span class="mini-sub-pro">Solicitações de Mensagens</span>
+                                    <span class="mini-sub-pro"><?= __('Solicitações de Mensagens') ?></span>
                                 </a>
                             </li>
                             <li><a title="Novo Grupo" href="<?= echo $this->Url->build('/mensagens/grupo/novo', true) ?>">
-                                    <span class="mini-sub-pro">Novo Grupo</span>
+                                    <span class="mini-sub-pro"><?= __('Novo Grupo') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -376,28 +376,28 @@ $countNotas = 2;
                                 <div class="header-top-menu tabl-d-n">
                                     <ul class="nav navbar-nav mai-top-nav">
                                         <li class="nav-item">
-                                            <a href="<?= echo $this->Url->build('/home', true) ?>" class="nav-link">Início</a>
+                                            <a href="<?= echo $this->Url->build('/home', true) ?>" class="nav-link"><?= __('Início')?></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?= echo $this->Url->build('/pesquisas', true) ?>" class="nav-link">Pesquisas</a>
+                                            <a href="<?= echo $this->Url->build('/pesquisas', true) ?>" class="nav-link"><?= __('Pesquisas')?></a>
                                         </li>
-                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/servicos', true) ?>" class="nav-link">Serviços</a>
+                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/servicos', true) ?>" class="nav-link"><?= __('Serviços')?></a>
                                         </li>
                                         <li class="nav-item dropdown res-dis-nn">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Demandas
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><?= __('Demandas')?>
                                                 <span class="angle-down-topmenu">
                                                     <i class="fa fa-angle-down"></i>
                                                 </span>
                                             </a>
                                             <div role="menu" class="dropdown-menu animated zoomIn">
                                                 <!-- demandas => truncadas, encerradas, concluídas, -->
-                                                <a href="<?= echo $this->Url->build('user/demandas/todos', true) ?>" class="dropdown-item">Minhas Demandas</a>
-                                                <a href="<?= echo $this->Url->build('/demandas/truncadas', true) ?>" class="dropdown-item">Demandas em desenvolvimento</a>
-                                                <a href="<?= echo $this->Url->build('/demandas/todos/', true) ?>" class="dropdown-item">Contibruir em alguma demanda</a>
-                                                <a href="<?= echo $this->Url->build('/demandas/todos', true) ?>" class="dropdown-item">Todas demandas públicas</a>
+                                                <a href="<?= echo $this->Url->build('user/demandas/todos', true) ?>" class="dropdown-item"><?= __('Minhas Demandas')?></a>
+                                                <a href="<?= echo $this->Url->build('/demandas/truncadas', true) ?>" class="dropdown-item"><?= __('Demandas em desenvolvimento') ?></a>
+                                                <a href="<?= echo $this->Url->build('/demandas/info/', true) ?>" class="dropdown-item"><?= __('Contibruir em alguma demanda'?></a>
+                                                <a href="<?= echo $this->Url->build('/demandas/todos', true) ?>" class="dropdown-item"><?= __('Todas demandas públicas') ?></a>
                                             </div>
                                         </li>
-                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/suporte', true) ?>" class="nav-link">Suporte</a>
+                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/suporte', true) ?>" class="nav-link"><?= __('Suporte') ?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -412,75 +412,29 @@ $countNotas = 2;
                                             </a>
                                             <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
                                                 <div class="message-single-top">
-                                                    <h1>Mensagem</h1>
+                                                    <h1><?= __('Mensagens') ?></h1>
                                                 </div>
                                                 <ul class="message-menu">
+                                                    <?php foreach(mensagens as mensagem): ?>
                                                     <li>
                                                         <a href="<?= echo $this->Url->build([
-                                                                                    "controller" => "Users",
-                                                                                    "action" => "mensagens",
-                                                                                    1
+                                                                                    "controller" => "mensagens",
+                                                                                    "action" => "todos",
+                                                                                    $mensagem->id
                                                                                 ]);?>">
                                                             <div class="message-img">
-                                                                <?= echo $this->Html->image('assets/contact/1.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
+                                                                <?= echo $this->Html->image($mensagem->remetente->user->perfi->img, ['alt' => 'Foto de Perfil do usuário remetente']) ?>
                                                             </div>
                                                             <div class="message-content">
-                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
+                                                                <span class="message-date"><?= h($mensagem->dataObtida)?></span>
+                                                                <h2><? h($mensagem->remetente->user->perfi->nome) ?></h2>
+                                                                <p><? h($mensagem->msg) ?></p>
                                                             </div>
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "mensagens",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="message-img">
-                                                                <?= echo $this->Html->image('assets/contact/4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                            </div>
-                                                            <div class="message-content">
-                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "mensagens",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="message-img">
-                                                                <?= echo $this->Html->image('assets/contact/3.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                            </div>
-                                                            <div class="message-content">
-                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "mensagens",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="message-img">
-                                                                <?= echo $this->Html->image('assets/contact/2.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                            </div>
-                                                            <div class="message-content">
-                                                                <span class="message-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Por favor, conclua esta demanda o mais rápido possível.</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
+                                                    <?php endforeach; ?>
                                                 <div class="message-view">
-                                                    <a href="<?= echo $this->Url->build('/mensagens', true) ?>">Ver todas mensagens </a>
+                                                    <a href="<?= echo $this->Url->build('/mensagens/todos', true) ?>"><?= __('Ver todas as Mensagens') ?></a>
                                                 </div>
                                             </div>
                                         </li>
@@ -491,100 +445,54 @@ $countNotas = 2;
                                             </a>
                                             <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                 <div class="notification-single-top">
-                                                    <h1>Notificações</h1>
+                                                    <h1><?= __('Notificações') ?></h1>
                                                 </div>
                                                 <ul class="notification-menu">
+                                                    <?php foreach($notificacoes as $notificacao): ?>
                                                     <li>
                                                         <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "notificacoes",
-                                                            1
+                                                            "controller" => "notificacao",
+                                                            "action" => "todos",
+                                                            $notificacao->id
                                                         ]);?>">
                                                             <div class="notification-icon">
                                                                 <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="notification-content">
-                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Falta 3 dias para a reunião com o diretor</p>
+                                                                <span class="notification-date"><?= h($notificacao->dataObtida)?></span>
+                                                                <h2><?= h($notificacao->remetente->user->perfi->nome) ?></h2>
+                                                                <p><?= h($notificacao->descricao) ?></p>
                                                             </div>
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "notificacoes",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="notification-icon">
-                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="notification-content">
-                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Falta 2 dias para expirar a entrega da demanda</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "notificacoes",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="notification-icon">
-                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="notification-content">
-                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Falta 3 dias para a reunião com o diretor</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="<?= echo $this->Url->build([
-                                                            "controller" => "Users",
-                                                            "action" => "notificacoes",
-                                                            1
-                                                        ]);?>">
-                                                            <div class="notification-icon">
-                                                                <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="notification-content">
-                                                                <span class="notification-date"><?= echo $hoje = date('J \d\e F Y \a\s g:i a' );?></span>
-                                                                <h2><?php echo $perfil['username']; ?></h2>
-                                                                <p>Falta 2 dias para expirar a entrega da demanda</p>
-                                                            </div>
-                                                        </a>
-                                                    </li>
+
                                                 </ul>
                                                 <div class="notification-view">
-                                                    <a href="<?= echo $this->Url->build('/user/notificacoes', true) ?>">Ver todas notificações</a>
+                                                    <a href="<?= echo $this->Url->build('/notificacoes/todos', true) ?>"><?= __('Ver todas notificações') ?></a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                <?= echo $this->Html->image('assets/product/pro4.jpg', ['alt' => 'Foto do Perfil do Usuário']) ?>
-                                                <span class="admin-name"><b class="">Prof.</b> Angelina</span>
+                                                <?= echo $this->Html->image($perfi->img, ['alt' => 'Esta é sua foto de perfil']) ?>
+                                                <span class="admin-name"><b class=""><?php echo $user['cargo']; ?></b><?php echo $user['first_name']; ?></span>
                                                 <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                 <li><a href="<?= echo $this->Url->build('/user/cadastro', true) ?>">
-                                                        <span class="edu-icon edu-home-admin author-log-ic"></span>Minha Conta</a>
+                                                        <span class="edu-icon edu-home-admin author-log-ic"></span><?= __('Minha Conta') ?></a>
                                                 </li>
                                                 <li><a href="<?= echo $this->Url->build('/perfil/editar', true) ?>">
-                                                        <span class="edu-icon edu-user-rounded author-log-ic"></span>Meu Perfil</a>
+                                                        <span class="edu-icon edu-user-rounded author-log-ic"></span><?= __('Meu Perfil') ?></a>
                                                 </li>
-                                                <li><a href="<?= echo $this->Url->build('/user/faturas', true) ?>">
-                                                        <span class="edu-icon edu-money author-log-ic"></span>Meu Faturamento</a>
+                                                <li><a href="<?= echo $this->Url->build('/faturas', true) ?>">
+                                                        <span class="edu-icon edu-money author-log-ic"></span><?= __('Meu Faturamento') ?></a>
                                                 </li>
-                                                <li><a href="<?= echo $this->Url->build('/perfil/configuracoes', true) ?>">
-                                                        <span class="edu-icon edu-settings author-log-ic"></span>Configurações</a>
+                                                <li><a href="<?= echo $this->Url->build('/configuracoes', true) ?>">
+                                                        <span class="edu-icon edu-settings author-log-ic"></span><?= __('Configurações') ?></a>
                                                 </li>
-                                                <li><a href="<?= echo $this->Url->build('/user/logout', true) ?>">
-                                                        <span class="edu-icon edu-locked author-log-ic"></span>Sair</a>
+                                                <li><a href="<?= echo $this->Url->build('/logout', true) ?>">
+                                                        <span class="edu-icon edu-locked author-log-ic"></span><?= __('Sair') ?></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -592,11 +500,11 @@ $countNotas = 2;
 
                                             <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
                                                 <ul class="nav nav-tabs custon-set-tab">
-                                                    <li class="active"><a data-toggle="tab" href="#Notes">Notas</a>
+                                                    <li class="active"><a data-toggle="tab" href="#Notes"><?= __('Notas') ?></a>
                                                     </li>
-                                                    <li><a data-toggle="tab" href="#Projects">Demandas</a>
+                                                    <li><a data-toggle="tab" href="#Projects"><?= __('Demandas') ?></a>
                                                     </li>
-                                                    <li><a data-toggle="tab" href="#Settings">Configurações</a>
+                                                    <li><a data-toggle="tab" href="#Settings"><?= __('Configurações') ?></a>
                                                     </li>
                                                 </ul>
 
@@ -604,7 +512,7 @@ $countNotas = 2;
                                                     <div id="Notes" class="tab-pane fade in active">
                                                         <div class="notes-area-wrap">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-comments-o"></i>Últimas Notas</h2>
+                                                                <h2><i class="fa fa-comments-o"></i><?= __('Últimas Notas') ?></h2>
                                                                 <p><?php if($countNotas >= 1){
                                                                             echo 'Você possui ' . $countNotas . ' novas notificações!';
                                                                         }else{
@@ -628,7 +536,7 @@ $countNotas = 2;
                                                                                 </div>
                                                                                 <div class="notes-content">
                                                                                     <p><?= h($nota->descricao) ?></p>
-                                                                                    <span><?= h($nota->dataEmitida) ?></span>
+                                                                                    <span><?= h($nota->dataObtida) ?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
@@ -641,8 +549,16 @@ $countNotas = 2;
                                                     <div id="Projects" class="tab-pane fade">
                                                         <div class="projects-settings-wrap">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-cube"></i>Últimas demandas</h2>
-                                                                <p> Você tem 20 demandas. 5 não estão completas.</p>
+                                                                <h2><i class="fa fa-cube"></i><?= h('Últimas demandas') ?></h2>
+                                                                <p><?php
+                                                                    if($demandas->countTruncadas == 1){
+                                                                        __("Você tem 1 demanda que ainda não foi concluida.");
+                                                                    }
+                                                                    if($demandas->countTruncadas >= 2){
+                                                                        __("Você tem " . $demandas->count .  " demandas. " . $demandas->countTruncadas . " não estão completas.");
+                                                                    }else{
+                                                                        __("Você tem " . $demandas->count .  " demandas. Parabéns todas foram concluidas.");
+                                                                }?></p>
                                                             </div>
                                                             <div class="project-st-list-area project-st-menu-scrollbar">
                                                                 <ul class="projects-st-menu-list">
@@ -672,7 +588,7 @@ $countNotas = 2;
                                                                                 <div class="projects-st-heading">
                                                                                     <h2><?= h($demanda->titulo) ?></h2>
                                                                                     <p><?= h($demanda->descricao) ?></p>
-                                                                                    <span class="project-st-time"><?= h($demanda->timeProgressivo) ?></span>
+                                                                                    <span class="project-st-time"><?= h($demanda->tempoProgressivo) ?></span>
                                                                                 </div>
                                                                                 <div class="projects-st-content">
                                                                                     <p><?= h($demanda->concluidoPorcentagem) ?></p>
@@ -692,14 +608,14 @@ $countNotas = 2;
                                                     <div id="Settings" class="tab-pane fade">
                                                         <div class="setting-panel-area">
                                                             <div class="note-heading-indicate">
-                                                                <h2><i class="fa fa-gears"></i>Painel de configurações</h2>
+                                                                <h2><i class="fa fa-gears"></i><?= __('Painel de configurações') ?></h2>
                                                                 <p> Tem 5 ajustes que você precisa fazer.</p>
                                                             </div>
                                                             <ul class="setting-panel-list">
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Exibir notificações</h2>
+                                                                            <h2><?= __('Exibir notificações') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
@@ -715,7 +631,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Disabilitar chat</h2>
+                                                                            <h2><?= __('Disabilitar chat') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
@@ -731,7 +647,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Lembrar dos meus compromissos</h2>
+                                                                            <h2><?= __('Lembrar meus compromissos') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
@@ -747,7 +663,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Trabalhar Ofline</h2>
+                                                                            <h2><?= __('Trabalhar Ofline') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
@@ -763,7 +679,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Update everyday</h2>
+                                                                            <h2><?= __('Update everyday') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
@@ -779,7 +695,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Global search</h2>
+                                                                            <h2><?= __('Sincronizar com celular') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example6">
@@ -795,7 +711,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2>Pesquisar Offline</h2>
+                                                                            <h2><?= __('Pesquisar Offline') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
