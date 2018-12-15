@@ -133,8 +133,8 @@ $countNotas = 2;
                                     <span class="mini-sub-pro"><?= __('Feed de Notícias') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Minhas Demandas') ?>" href="<?= echo $this->Url->build('/user/demandas', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Minhas Demandas') ?></span> <!-- saida: http://dominio.com/user/demandas -->
+                            <li><a title="<?= __('Missões de cidadania') ?>" href="<?= echo $this->Url->build('/missoes', true)?>">
+                                    <span class="mini-sub-pro"><?= __('missões de cidadania') ?></span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
                             <li><a title="<?= __('Linha temporal') ?>” href="<?= echo $this->Url->build('/timeline', true)?>">
@@ -142,12 +142,16 @@ $countNotas = 2;
                                 </a>
                             </li>
 
-                            <li><a title="<?= __('Análise Técnica') ?>” href="<?= echo $this->Url->build('/analise', true)?>">
-                                <span class="mini-sub-pro"><?= __('Análise Técnica') ?></span>
+                            <li><a title="<?= __('TV Educafro') ?>” href="<?= echo $this->Url->build('/tv', true)?>">
+                                <span class="mini-sub-pro"><?= __('TV Educafro') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Laboratório de Insights') ?>" href="<?= echo $this->Url->build('/insights', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Laboratório de Insights') ?></span>
+                            <li><a title="<?= __('blog educafro') ?>" href="<?= echo $this->Url->build('/blog', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Blog Educafro') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Fórum educafro') ?>" href="<?= echo $this->Url->build('/forum', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Fórum Educafro') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -158,27 +162,52 @@ $countNotas = 2;
                             <span class="mini-click-non"><?= __('Eventos') ?></span>
                         </a>
                     </li>
+
+                    <li>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/cursos', true);?>" aria-expanded="false">
+                            <span class="educate-icon educate-course icon-wrap"></span>
+                            <span class="mini-click-non"><?= __('Cursos') ?></span>
+                        </a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="<?= __('Todos os cursos') ?>" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Todos os cursos') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Meus cursos') ?>" href="<?= echo $this->Url->build('/cursos/meus', true) ?>">
+                                    <span class="mini-sub-pro"><?= __('Meus Cursos') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Análise dos cursos') ?>" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
+                                    <span class="mini-sub-pro"><?= __('Análise dos cursos') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Provas e gabaritos') ?>" href="<?= echo $this->Url->build('/cursos/minhasProvas', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Provas e gabaritos') ?></span>
+                                </a>
+                            </li>
+
+                            <li><a title="<?= __('Matriz curricular') ?>" href="<?= echo $this->Url->build('/cursos/meuCurriculo', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Matriz Curricular') ?></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non"><?= __('Professores') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-<<<<<<< HEAD
                             <li><a title="<?= __('Todos Professores') ?>" href="<?= echo $this->Url->build('/professores/todos', true)?>">
                                     <span class="mini-sub-pro"><?= __('Todos Professores') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Novo Professor') ?>" href="<?= echo $this->Url->build('/professores/novo', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Novo Professor') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Editar Professor') ?>" href="<?= echo $this->Url->build('/professores/editar', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Editar Professor') ?></span>
-                                </a>
-                            </li>
                             <li><a title="<?= __('Perfil do Professor') ?>" href="<?= echo $this->Url->build('/professores/perfil', true)?>">
                                     <span class="mini-sub-pro"><?= __('Perfil do Professor') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Meus Professores') ?>" href="<?= echo $this->Url->build('/professores/meus', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Meus Professores') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -193,14 +222,6 @@ $countNotas = 2;
                                     <span class="mini-sub-pro"><?= __('Todos Voluntários') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Novo Voluntário') ?>" href="<?= echo $this->Url->build('/voluntarios/novo', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Novo Voluntário') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Editar Voluntários') ?>" href="<?= echo $this->Url->build('/voluntarios/editar', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Editar Voluntários') ?></span>
-                                </a>
-                            </li>
                             <li><a title="<?= __('Perfil do Voluntário') ?>" href="<?= echo $this->Url->build('/voluntarios/perfil', true)?>">
                                     <span class="mini-sub-pro"><?= __('Perfil do Voluntário') ?></span>
                                 </a>
@@ -208,97 +229,37 @@ $countNotas = 2;
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/alunos', true)?>" aria-expanded="false">
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/monitores', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-student icon-wrap"></span>
-                            <span class="mini-click-non"><?= __('Alunos') ?></span>
+                            <span class="mini-click-non"><?= __('Monitores') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="<?= __('Todos Alunos') ?>" href="<?= echo $this->Url->build('/alunos/todos', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Todos Alunos') ?></span>
+                            <li><a title="<?= __('Todos Monitores') ?>" href="<?= echo $this->Url->build('/monitores/todos', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Todos Monitores') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Novo Aluno') ?>" href="<?= echo $this->Url->build('/alunos/novo', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Novo Aluno') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Editar Aluno') ?>" href="<?= echo $this->Url->build('/alunos/editar', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Editar Aluno') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Perfil do Aluno') ?>" href="<?= echo $this->Url->build('/alunos/perfil', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Perfil do Aluno') ?></span>
+                            <li><a title="<?= __('Perfil dos Monitores') ?>" href="<?= echo $this->Url->build('/monitores/perfil', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Perfil dos Monitores') ?></span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/cursos', true);?>" aria-expanded="false">
-                            <span class="educate-icon educate-course icon-wrap"></span>
-                            <span class="mini-click-non"><?= __('Cursos') ?></span>
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/mensagens', true) ?>" aria-expanded="false">
+                            <span class="educate-icon educate-message icon-wrap"></span>
+                            <span class="mini-click-non"><?= __('Caixa de Mensagens') ?></span>
                         </a>
                         <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="<?= __('Todos os cursos') ?>" href="<?= echo $this->Url->build('/cursos/todos', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Todos os cursos') ?></span>
+                            <li><a title="<?= __('Recentes') ?>" href="<?= echo $this->Url->build('/mensagens/recentes', true) ?>">
+                                    <span class="mini-sub-pro"><?= __('Recentes') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Novo curso') ?>" href="<?= echo $this->Url->build('/cursos/novo', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Novo curso') ?></span>
+                            <li><a title="<?= __('Solicitações de Mensagens') ?>" href="<?= echo $this->Url->build('/mensagens/solicitacoes', true) ?>">
+                                    <span class="mini-sub-pro"><?= __('Solicitações de Mensagens') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Editar curso') ?>" href="<?= echo $this->Url->build('/cursos/editar', true)?>">
-                                    <span class="mini-sub-pro"><?= __('Editar curso') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Ver curso') ?>" href="<?= echo $this->Url->build('/cursos/perfil', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Ver curso') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Análise dos cursos') ?>" href="<?= echo $this->Url->build('/cursos/analise', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Análise dos cursos') ?></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/ferramentas', true) ?>" aria-expanded="false">
-                            <span class="educate-icon educate-library icon-wrap"></span>
-                            <span class="mini-click-non"><?= __('Maleta de Ferramentas') ?></span>
-                        </a>
-                        <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="<?= __('Todas as ferramentas') ?>" href="<?= echo $this->Url->build('/ferramentas/todos', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Todas as ferramentas') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Nova Ferramenta') ?>" href="<?= echo $this->Url->build('/ferramentas/novo', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Nova Ferramenta') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Editar Ferramentas') ?>" href="<?= echo $this->Url->build('/ferramentas/editar', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Editar Ferramentas') ?></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/departamentos', true) ?>" aria-expanded="false">
-                            <span class="educate-icon educate-department icon-wrap"></span>
-                            <span class="mini-click-non"><?= __('Departamentos') ?></span>
-                        </a>
-                        <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="<?= __('Lista de Departamentos') ?>" href="<?= echo $this->Url->build('/departamentos/todos', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Lista de Departamentos') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Criar Departamento') ?>" href="<?= echo $this->Url->build('/departamentos/novo', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Criar Departamento') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Editar Departamento') ?>" href="<?= echo $this->Url->build('/departamentos/editar', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Editar Departamento') ?></span>
-                                </a>
-                            </li>
-                            <li><a title="<?= __('Análise Departamental') ?>" href="<?= echo $this->Url->build('/departamentos/analise', true) ?>">
-                                    <span class="mini-sub-pro"><?= __('Análise Departamental') ?></span>
+                            <li><a title="<?= __('Novo Grupo') ?>" href="<?= echo $this->Url->build('/mensagens/grupo/novo', true) ?>">
+                                    <span class="mini-sub-pro"><?= __('Novo Grupo') ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -381,7 +342,7 @@ $countNotas = 2;
                                         <li class="nav-item">
                                             <a href="<?= echo $this->Url->build('/pesquisas', true) ?>" class="nav-link"><?= __('Pesquisas')?></a>
                                         </li>
-                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/servicos', true) ?>" class="nav-link"><?= __('Serviços')?></a>
+                                        <li class="nav-item"><a href="<?= echo $this->Url->build('/servicos', true) ?>" class="nav-link"><?= __('Aulas')?></a>
                                         </li>
                                         <li class="nav-item dropdown res-dis-nn">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><?= __('Demandas')?>
@@ -391,10 +352,10 @@ $countNotas = 2;
                                             </a>
                                             <div role="menu" class="dropdown-menu animated zoomIn">
                                                 <!-- demandas => truncadas, encerradas, concluídas, -->
-                                                <a href="<?= echo $this->Url->build('user/demandas/todos', true) ?>" class="dropdown-item"><?= __('Minhas Demandas')?></a>
+                                                <a href="<?= echo $this->Url->build('demandas/meus', true) ?>" class="dropdown-item"><?= __('Minhas Demandas')?></a>
                                                 <a href="<?= echo $this->Url->build('/demandas/truncadas', true) ?>" class="dropdown-item"><?= __('Demandas em desenvolvimento') ?></a>
-                                                <a href="<?= echo $this->Url->build('/demandas/info/', true) ?>" class="dropdown-item"><?= __('Contibruir em alguma demanda'?></a>
-                                                <a href="<?= echo $this->Url->build('/demandas/todos', true) ?>" class="dropdown-item"><?= __('Todas demandas públicas') ?></a>
+                                                <a href="<?= echo $this->Url->build('/demandas/info/', true) ?>" class="dropdown-item"><?= __('Contibruir como monitor'?></a>
+                                                <a href="<?= echo $this->Url->build('/demandas/todos', true) ?>" class="dropdown-item"><?= __('Todi') ?></a>
                                             </div>
                                         </li>
                                         <li class="nav-item"><a href="<?= echo $this->Url->build('/suporte', true) ?>" class="nav-link"><?= __('Suporte') ?></a>
