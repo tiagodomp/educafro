@@ -137,29 +137,41 @@ $countNotas = 2;
                                     <span class="mini-sub-pro"><?= __('Minhas Demandas') ?></span> <!-- saida: http://dominio.com/user/demandas -->
                                 </a>
                             </li>
-                            <li><a title="<?= __('Linha temporal') ?>” href="<?= echo $this->Url->build('/timeline', true)?>">
+                            <li><a title="<?= __('Linha temporal') ?>” href="<?= echo $this->Url->build('/timeline/admin', true)?>">
                                 <span class="mini-sub-pro"><?= __('Linha temporal') ?></span>
                                 </a>
                             </li>
 
-                            <li><a title="<?= __('Análise Técnica') ?>” href="<?= echo $this->Url->build('/analise', true)?>">
+                            <li><a title="<?= __('Análise Técnica') ?>” href="<?= echo $this->Url->build('/analise/admin', true)?>">
                                 <span class="mini-sub-pro"><?= __('Análise Técnica') ?></span>
                                 </a>
                             </li>
-                            <li><a title="<?= __('Laboratório de Insights') ?>" href="<?= echo $this->Url->build('/insights', true)?>">
+                            <li><a title="<?= __('Laboratório de Insights') ?>" href="<?= echo $this->Url->build('/insights/admin', true)?>">
                                     <span class="mini-sub-pro"><?= __('Laboratório de Insights') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('TV Educafro') ?>” href="<?= echo $this->Url->build('/tv/admin', true)?>">
+                                <span class="mini-sub-pro"><?= __('TV Educafro') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('blog educafro') ?>" href="<?= echo $this->Url->build('/blog/admin', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Blog Educafro') ?></span>
+                                </a>
+                            </li>
+                            <li><a title="<?= __('Fórum educafro') ?>" href="<?= echo $this->Url->build('/forum/admin', true)?>">
+                                    <span class="mini-sub-pro"><?= __('Fórum Educafro') ?></span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a title="<?= __('Eventos') ?>" href="<?= echo $this->Url->build('/eventos', true)?>" aria-expanded="false">
+                        <a title="<?= __('Eventos') ?>" href="<?= echo $this->Url->build('/eventos/admin', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                             <span class="mini-click-non"><?= __('Eventos') ?></span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/professores', true)?>" aria-expanded="false">
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/professores/admin', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non"><?= __('Professores') ?></span>
                         </a>
@@ -184,7 +196,7 @@ $countNotas = 2;
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios', true)?>" aria-expanded="false">
+                        <a class="has-arrow" href="<?= echo $this->Url->build('/voluntarios/admin', true)?>" aria-expanded="false">
                             <span class="educate-icon educate-professor icon-wrap"></span>
                             <span class="mini-click-non"><?= __('Voluntários') ?></span>
                         </a>
