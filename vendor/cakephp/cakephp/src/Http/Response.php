@@ -1111,7 +1111,7 @@ class Response implements ResponseInterface
     {
         deprecationWarning(
             'Response::type() is deprecated. ' .
-            'Use getType() or withType() instead.'
+            'Use setTypeMap(), getType() or withType() instead.'
         );
 
         if ($contentType === null) {
@@ -1135,6 +1135,22 @@ class Response implements ResponseInterface
         $this->_setContentType();
 
         return $contentType;
+    }
+
+    /**
+     * Sets a content type definition into the map.
+     *
+     * E.g.: setTypeMap('xhtml', ['application/xhtml+xml', 'application/xhtml'])
+     *
+     * This is needed for RequestHandlerComponent and recognition of types.
+     *
+     * @param string $type Content type.
+     * @param string|array $mimeType Definition of the mime type.
+     * @return void
+     */
+    public function setTypeMap($type, $mimeType)
+    {
+        $this->_mimeTypes[$type] = $mimeType;
     }
 
     /**
@@ -2055,19 +2071,20 @@ class Response implements ResponseInterface
     {
         $etags = preg_split('/\s*,\s*/', (string)$request->getHeaderLine('If-None-Match'), 0, PREG_SPLIT_NO_EMPTY);
         $responseTag = $this->getHeaderLine('Etag');
+        $etagMatches = null;
         if ($responseTag) {
             $etagMatches = in_array('*', $etags) || in_array($responseTag, $etags);
         }
 
         $modifiedSince = $request->getHeaderLine('If-Modified-Since');
+        $timeMatches = null;
         if ($modifiedSince && $this->hasHeader('Last-Modified')) {
             $timeMatches = strtotime($this->getHeaderLine('Last-Modified')) === strtotime($modifiedSince);
         }
-        $checks = compact('etagMatches', 'timeMatches');
-        if (empty($checks)) {
+        if ($etagMatches === null && $timeMatches === null) {
             return false;
         }
-        $notModified = !in_array(false, $checks, true);
+        $notModified = $etagMatches !== false && $timeMatches !== false;
         if ($notModified) {
             $this->notModified();
         }
