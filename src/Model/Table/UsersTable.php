@@ -55,6 +55,18 @@ class UsersTable extends Table
             'foreignKey' => 'roles_id',
             'joinType' => 'INNER'
         ]);
+
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'picture' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'photo_dir', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+        ]);
     }
 
     /**
@@ -134,7 +146,7 @@ class UsersTable extends Table
             ->allowEmpty('cover');
 
         $validator
-            ->scalar('picture')
+            //->scalar('picture')
             ->maxLength('picture', 255)
             ->allowEmpty('picture');
 

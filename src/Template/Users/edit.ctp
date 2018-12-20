@@ -29,7 +29,7 @@
     </ul>
 </nav>
 <div class="users index large-10 medium-9 columns content">
-    <?= $this->Form->create($user) ?>
+    <?= $this->Form->create($user, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Editar Usuário') ?></legend>
         <?php
@@ -40,7 +40,7 @@
             echo $this->Form->control('last_name');
             echo $this->Form->control('gender');
             echo $this->Form->control('locale');
-            echo $this->Form->control('picture');
+            echo $this->Form->control('picture',['type' => 'file']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>

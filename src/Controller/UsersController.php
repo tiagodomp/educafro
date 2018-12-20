@@ -46,7 +46,7 @@ class UsersController extends AppController {
 
             //Alunos
             case 3:
-                $this->Auth->allow(['logout', 'validar', 'login', 'lembrar', 'perfil', 'validarCodigo', 'meuCodigo', 'redirecionar']);
+                $this->Auth->allow(['logout', 'validar', 'login', 'lembrar', 'perfil', 'validarCodigo', 'meuCodigo', 'redirecionar', 'edit', 'index', 'view']);
                 break;
 
             //Público
