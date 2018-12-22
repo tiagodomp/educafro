@@ -480,7 +480,7 @@ $countNotas = 2;
                                                     <?php endforeach; ?>
                                                 </ul>
                                                 <div class="notification-view">
-                                                    <a href="<?= echo $this->Url->build('/notificacoes/todos', true) ?>"><?= __('Ver todas notificações') ?></a>
+                                                    <a href="<?= echo $this->Url->build('/notificacoes/todos', true) ?>"><?= __('Ver todas Notificações') ?></a>
                                                 </div>
                                             </div>
                                         </li>
@@ -602,7 +602,7 @@ $countNotas = 2;
                                                                                     <span class="project-st-time"><?= h($demanda->dataObtida) ?></span>
                                                                                 </div>
                                                                                 <div class="projects-st-content">
-                                                                                    <p><?= h($demanda->concluidoPorcentagem) ?></p>
+                                                                                    <p><?= __("Completada: ") h($demanda->concluidoPorcentagem) ?></p>
                                                                                     <div class="progress progress-mini">
                                                                                         <div style="width: 28%;" id="progressoDemanda" class="progress-bar hd-tp-1"></div>
                                                                                     </div>
@@ -674,7 +674,7 @@ $countNotas = 2;
                                                                 <li>
                                                                     <div class="checkbox-setting-pro">
                                                                         <div class="checkbox-title-pro">
-                                                                            <h2><?= __('Trabalhar Ofline') ?></h2>
+                                                                            <h2><?= __('Trabalhar Offline') ?></h2>
                                                                             <div class="ts-custom-check">
                                                                                 <div class="onoffswitch">
                                                                                     <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
