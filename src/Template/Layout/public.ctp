@@ -72,7 +72,9 @@ $perfil = $session->read('Auth.User');
                 </li>
             </ul>
             <div class="my-2 my-lg-0 mr-4">
-                <button type="button" class="btn btn-outline-secondary my-2 my-sm-0" href="<?php echo $this->Url->build(['controller' => 'Users', 'action' => 'logout']);?>">Sair</button>
+                <a href="<?php echo $this->Url->build('/logout', true) ?>">
+                <button type="button" class="btn btn-outline-secondary my-2 my-sm-0" >Sair</button>
+                </a>
             </div>
         </div>
     </nav>
