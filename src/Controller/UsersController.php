@@ -81,7 +81,7 @@ class UsersController extends AppController {
             $this->Auth->setUser($user);
             $this->redirect(['controller' => 'Users', 'action' => 'redirecionar']);
         }*/
-        $this->set(compact('users'));
+        $this->set('users');
         $this->render('login', 'initial');
     }
 
