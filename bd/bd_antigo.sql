@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `educafro`.`cursos` (
   `prox_turma` DATE NULL,
   `objetivo` TINYTEXT NULL,
   `created` DATETIME NULL,
-  `datetime` DATETIME NULL,
+  `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 ENGINE = InnoDB;
