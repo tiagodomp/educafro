@@ -1,0 +1,75 @@
+<?php
+namespace App\Test\TestCase\Model\Table;
+
+use App\Model\Table\GruposDeOutrosTable;
+use Cake\ORM\TableRegistry;
+use Cake\TestSuite\TestCase;
+
+/**
+ * App\Model\Table\GruposDeOutrosTable Test Case
+ */
+class GruposDeOutrosTableTest extends TestCase
+{
+
+    /**
+     * Test subject
+     *
+     * @var \App\Model\Table\GruposDeOutrosTable
+     */
+    public $GruposDeOutros;
+
+    /**
+     * Fixtures
+     *
+     * @var array
+     */
+    public $fixtures = [
+        'app.GruposDeOutros',
+        'app.Grupos',
+        'app.Outros'
+    ];
+
+    /**
+     * setUp method
+     *
+     * @return void
+     */
+    public function setUp()
+    {
+        parent::setUp();
+        $config = TableRegistry::getTableLocator()->exists('GruposDeOutros') ? [] : ['className' => GruposDeOutrosTable::class];
+        $this->GruposDeOutros = TableRegistry::getTableLocator()->get('GruposDeOutros', $config);
+    }
+
+    /**
+     * tearDown method
+     *
+     * @return void
+     */
+    public function tearDown()
+    {
+        unset($this->GruposDeOutros);
+
+        parent::tearDown();
+    }
+
+    /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+}
