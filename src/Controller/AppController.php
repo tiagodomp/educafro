@@ -54,11 +54,11 @@ class AppController extends Controller
                     'Crud.View',
                 ],
                 'listeners' => [
-                    'Crud.ApiQueryLog',
-                    'Crud.RelatedModels',
-                    'Crud.Search',
-                    'CrudJsonApi.JsonApi',
-                    'CrudJsonApi.Pagination',
+                    //'Crud.ApiQueryLog',
+                    //'Crud.RelatedModels',
+                    //'Crud.Search',
+                    //'CrudJsonApi.JsonApi',
+                    //'CrudJsonApi.Pagination',
                 ],
             ]);
         } catch (Exception $exception) {
