@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\UserTable|\Cake\ORM\Association\BelongsTo $User
  * @property \App\Model\Table\RegrasTable|\Cake\ORM\Association\BelongsTo $Regras
+ * @property \App\Model\Table\GruposTable|\Cake\ORM\Association\BelongsTo $Grupos
  *
  * @method \App\Model\Entity\Outro get($primaryKey, $options = [])
  * @method \App\Model\Entity\Outro newEntity($data = null, array $options = [])
@@ -49,6 +50,9 @@ class OutrosTable extends Table
         $this->belongsTo('Regras', [
             'foreignKey' => 'regras_id',
             'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Grupos', [
+            'foreignKey' => 'grupos_id'
         ]);
     }
 
@@ -118,6 +122,7 @@ class OutrosTable extends Table
         $rules->add($rules->isUnique(['id']));
         $rules->add($rules->existsIn(['user_id'], 'User'));
         $rules->add($rules->existsIn(['regras_id'], 'Regras'));
+        $rules->add($rules->existsIn(['grupos_id'], 'Grupos'));
 
         return $rules;
     }

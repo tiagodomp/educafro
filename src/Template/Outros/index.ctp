@@ -12,6 +12,8 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'User', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Regras'), ['controller' => 'Regras', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Regra'), ['controller' => 'Regras', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Grupos'), ['controller' => 'Grupos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Grupo'), ['controller' => 'Grupos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="outros index large-9 medium-8 columns content">
@@ -22,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('regras_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('grupos_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('tipo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('presenca') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('pontuacao') ?></th>
@@ -44,6 +47,7 @@
                 <td><?= $this->Number->format($outro->id) ?></td>
                 <td><?= $outro->has('user') ? $this->Html->link($outro->user->id, ['controller' => 'User', 'action' => 'view', $outro->user->id]) : '' ?></td>
                 <td><?= $outro->has('regra') ? $this->Html->link($outro->regra->id, ['controller' => 'Regras', 'action' => 'view', $outro->regra->id]) : '' ?></td>
+                <td><?= $outro->has('grupo') ? $this->Html->link($outro->grupo->id, ['controller' => 'Grupos', 'action' => 'view', $outro->grupo->id]) : '' ?></td>
                 <td><?= h($outro->tipo) ?></td>
                 <td><?= h($outro->presenca) ?></td>
                 <td><?= $this->Number->format($outro->pontuacao) ?></td>

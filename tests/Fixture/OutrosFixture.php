@@ -20,6 +20,7 @@ class OutrosFixture extends TestFixture
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'regras_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'grupos_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'tipo' => ['type' => 'string', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_unicode_520_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'presenca' => ['type' => 'json', 'length' => null, 'null' => true, 'default' => null, 'comment' => '{script_metodo_verificacao_presenca, [{date:[presente:true, hora_chegada, hora_saida, relevancia:0-10, modificadores_id] }] }', 'precision' => null],
         'pontuacao' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => 'pontuacao gerada com o envolvimento e cumprimento das metas do sistema', 'precision' => null, 'autoIncrement' => null],
@@ -62,6 +63,7 @@ class OutrosFixture extends TestFixture
                 'id' => 1,
                 'user_id' => 1,
                 'regras_id' => 1,
+                'grupos_id' => 1,
                 'tipo' => 'Lorem ipsum dolor sit amet',
                 'presenca' => '',
                 'pontuacao' => 1,
@@ -73,8 +75,8 @@ class OutrosFixture extends TestFixture
                 'avaliacao_administradores' => '',
                 'dias_disponiveis' => '',
                 'conselheiro' => '',
-                'created' => '2019-01-13 02:29:30',
-                'modified' => '2019-01-13 02:29:30'
+                'created' => '2019-01-13 21:25:42',
+                'modified' => '2019-01-13 21:25:42'
             ],
         ];
         parent::init();

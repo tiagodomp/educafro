@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\EventManager;
 
 /**
  * User Controller
@@ -12,6 +13,52 @@ use App\Controller\AppController;
  */
 class UserController extends AppController
 {
+
+    public function initialize()
+    {
+
+    }
+
+    /// Método UserPaginaInicial() retorna a pagina home que o Inquilino verá,
+    /// redirecionando para criação de sessions, cookies e logs.
+    public function UserPaginaInicial()
+    {
+
+        $dadosIdsIniciais = $this->User
+            ->find('json')
+            /// Verificar o comentário do campo 'info' tabela 'USER' no banco de dados, no qual especifica a estrutura do arquivo JSON
+            ->jsonSelect([
+                [
+                    /// Retornara ['login'=> ['<AliasTabela>ID' => 'valorID']]
+                    'login.perfisID' => 'info.SessionInitial.login.perfis_id@attributes',
+                    'login.userHistoricoAcoesID' => 'info.SessionInitial.login.user_historico_acoes_id@attributes',
+                    'login.userPreferenciasID' => 'info.SessionInitial.login.user_preferencias_id@attributes',
+                    'login.userInfoID' => 'info.SessionInitial.login.user_info_id@attributes',
+                    'login.regrasHistoricoAtribuicoesID' => 'info.SessionInitial.login.regras_historico_atribuicoes_id@attributes',
+                    'login.perfisPreferenciasID' => 'info.SessionInitial.login.perfis_preferencias_id@attributes',
+                    'login.gruposMembrosID' => 'info.SessionInitial.login.grupos_membros_id@attributes',
+                ],
+                '.'
+            ])
+            ->jsonWhere([
+                'info.status.ativo@attributes' => true
+            ])
+           /*->jsonOrder([
+                'created@attributes' => 'DESC'
+            ])*/
+            ->all();
+        /*
+        $query = $this->Users
+            ->find('json', [
+                'json.fields' => ['prefs.theme@attributes'],
+                'json.conditions' => ['username@attributes' => 'user']),
+                'json.sort' => ['created@attributes' => 'DESC']
+            ->all();
+        */
+
+        //$perfisID = $this->Users->find('json')->jsonSelect(['perfil.id' => 'info.SessionInitial.login.perfis_id@attributes'], 'false')->first()->toArray();
+        // Retornara $perfisID = ['perfis'=> ['id' => 'ValorRetornado']]
+    }
 
     /**
      * Index method
@@ -24,6 +71,7 @@ class UserController extends AppController
             'contain' => ['UserCadastro', 'Perfis']
         ];
         $user = $this->paginate($this->User);
+
 
         $this->set(compact('user'));
     }

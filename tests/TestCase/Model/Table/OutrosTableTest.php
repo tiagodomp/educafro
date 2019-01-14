@@ -26,7 +26,8 @@ class OutrosTableTest extends TestCase
     public $fixtures = [
         'app.Outros',
         'app.User',
-        'app.Regras'
+        'app.Regras',
+        'app.Grupos'
     ];
 
     /**

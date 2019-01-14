@@ -41,6 +41,7 @@ class UserTable extends Table
         $this->setPrimaryKey(['id', 'user_cadastro_id', 'perfis_id']);
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Lqdt/OrmJson.json');
 
         $this->belongsTo('UserCadastro', [
             'foreignKey' => 'user_cadastro_id',

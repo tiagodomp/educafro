@@ -30,6 +30,15 @@ class AppController extends Controller
     //ativando o plugin FriendsOfCake/Crud em toda aplicação
     use \Crud\Controller\ControllerTrait;
 
+    public function beforeFilter(\Cake\Event\Event $event)
+    {
+        parent::beforeFilter($event);
+        /*$this->Crud->mapAction('index', [
+            'className' => 'Crud.Index',
+            'view' => 'my_index'
+        ]);*/
+    }
+
     /**
      * Initialization hook method.
      *
@@ -38,10 +47,13 @@ class AppController extends Controller
      * e.g. `$this->loadComponent('Security');`
      *
      * @return void
+     *
      */
     public function initialize()
     {
         parent::initialize();
+
+        $this->loadComponent('Auth');
 
         //Carregando componentes CRUD
         try {
@@ -69,6 +81,10 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
+
+        $this->Crud->addListener('relatedModels', 'Crud.RelatedModels');
+        $this->Crud->addListener('Crud.Api');
+        $this->Crud->addListener('Crud.ApiQueryLog');
 
         /*
          * Enable the following component for recommended CakePHP security settings.

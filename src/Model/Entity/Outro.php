@@ -9,6 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $user_id
  * @property int $regras_id
+ * @property int|null $grupos_id
  * @property string|null $tipo
  * @property array|null $presenca
  * @property int|null $pontuacao
@@ -25,6 +26,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\User $user
  * @property \App\Model\Entity\Regra $regra
+ * @property \App\Model\Entity\Grupo $grupo
  */
 class Outro extends Entity
 {
@@ -39,6 +41,7 @@ class Outro extends Entity
      * @var array
      */
     protected $_accessible = [
+        'grupos_id' => true,
         'tipo' => true,
         'presenca' => true,
         'pontuacao' => true,
@@ -53,6 +56,7 @@ class Outro extends Entity
         'created' => true,
         'modified' => true,
         'user' => true,
-        'regra' => true
+        'regra' => true,
+        'grupo' => true
     ];
 }

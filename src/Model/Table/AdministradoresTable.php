@@ -37,7 +37,7 @@ class AdministradoresTable extends Table
         parent::initialize($config);
 
         $this->setTable('administradores');
-        $this->setDisplayField('id');
+        $this->setDisplayField('user_id.primeiro_nome');
         $this->setPrimaryKey(['id', 'regras_id', 'user_id']);
 
         $this->addBehavior('Timestamp');

@@ -15,6 +15,8 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'User', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Regras'), ['controller' => 'Regras', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Regra'), ['controller' => 'Regras', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Grupos'), ['controller' => 'Grupos', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Grupo'), ['controller' => 'Grupos', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="outros view large-9 medium-8 columns content">
@@ -27,6 +29,10 @@
         <tr>
             <th scope="row"><?= __('Regra') ?></th>
             <td><?= $outro->has('regra') ? $this->Html->link($outro->regra->id, ['controller' => 'Regras', 'action' => 'view', $outro->regra->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Grupo') ?></th>
+            <td><?= $outro->has('grupo') ? $this->Html->link($outro->grupo->id, ['controller' => 'Grupos', 'action' => 'view', $outro->grupo->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Tipo') ?></th>

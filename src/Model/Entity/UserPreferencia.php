@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Lqdt\OrmJson\Model\Entity\JsonTrait;
 
 /**
  * UserPreferencia Entity

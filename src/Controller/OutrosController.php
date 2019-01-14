@@ -21,7 +21,7 @@ class OutrosController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['User', 'Regras']
+            'contain' => ['User', 'Regras', 'Grupos']
         ];
         $outros = $this->paginate($this->Outros);
 
@@ -38,7 +38,7 @@ class OutrosController extends AppController
     public function view($id = null)
     {
         $outro = $this->Outros->get($id, [
-            'contain' => ['User', 'Regras']
+            'contain' => ['User', 'Regras', 'Grupos']
         ]);
 
         $this->set('outro', $outro);
@@ -63,7 +63,8 @@ class OutrosController extends AppController
         }
         $user = $this->Outros->User->find('list', ['limit' => 200]);
         $regras = $this->Outros->Regras->find('list', ['limit' => 200]);
-        $this->set(compact('outro', 'user', 'regras'));
+        $grupos = $this->Outros->Grupos->find('list', ['limit' => 200]);
+        $this->set(compact('outro', 'user', 'regras', 'grupos'));
     }
 
     /**
@@ -89,7 +90,8 @@ class OutrosController extends AppController
         }
         $user = $this->Outros->User->find('list', ['limit' => 200]);
         $regras = $this->Outros->Regras->find('list', ['limit' => 200]);
-        $this->set(compact('outro', 'user', 'regras'));
+        $grupos = $this->Outros->Grupos->find('list', ['limit' => 200]);
+        $this->set(compact('outro', 'user', 'regras', 'grupos'));
     }
 
     /**
