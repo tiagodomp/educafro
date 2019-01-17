@@ -1,7 +1,10 @@
 <?php
 namespace App\Model\Entity;
 
+use CakeDC\Users\Model;
 use Cake\ORM\Entity;
+use Lqdt\OrmJson\Model\Entity\JsonTrait;
+use Cake\I18n\Time;
 
 /**
  * User Entity
@@ -34,7 +37,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\UserCadastro $user_cadastro
  * @property \App\Model\Entity\Perfi $perfi
  */
-class User extends Entity
+class User extends Model\Entity\User
 {
 
     use JsonTrait;
@@ -82,4 +85,88 @@ class User extends Entity
     protected $_hidden = [
         'password'
     ];
+
+    /// Método que retorna o nome completo através da chamada "echo $user->nome_completo;"
+    protected function _getNomeCompleto ()
+    {
+        $NomeCompleto = null;
+
+        ///Concatenação dos dados que existirem
+        if(is_string($this->_properties['primeiro_nome'])){
+            $NomeCompleto =  $this->_properties['primeiro_nome'];
+        }
+        if(is_string($this->_properties['meio_nome'])){
+            $NomeCompleto .= " ".$this->_properties['meio_nome'];
+        }
+        if(is_string($ultimoNome)){
+            $NomeCompleto .= " ".$this->_properties['ultimo_nome'];
+        }
+
+        return $NomeCompleto;
+    }
+
+    ///Método que especifique os dados que serão salvos no campo JSON
+    protected function infoJson()
+    {
+        ///Certificar-se que o JSON é válido antes de implementá-lo https://codebeautify.org/jsonviewer
+        $baseJson = '{
+                      "status": {
+                        "Pendente": null,
+                        "Ativo": null,
+                        "Penalizado": null,
+                        "Bloqueado": null,
+                        "info": {
+                          "pendente": {
+                            "criado": "",
+                            "MaquinaIP": ""
+                          },
+                          "ativo": {
+                            "modificadores_id": "",
+                            "criado": ""
+                          },
+                          "penalizado": {
+                            "modificadores_id": "",
+                            "_inicio": "",
+                            "_final": "",
+                            "motivo": "",
+                            "importancia": "",
+                            "tipo": {
+                              "iterador": "",
+                              "data_ultima_pena": "",
+                              "importancia": ""
+                            }
+                          },
+                          "bloqueado": {
+                            "modificadores_id": "",
+                            "datetime": "",
+                            "motivo": ""
+                          }
+                        }
+                      },
+                      "SessionInitial": {
+                          "login": {
+                            "user_historico_acoes_id": "",
+                            "user_preferencias_id": "",
+                            "user_info_id": "",
+                            "regras_historico_atribuicoes_id": "",
+                            "perfis_preferencias_id": "",
+                            "grupos_membros_id": ""
+                          },
+                          "modificacoesNaoSalvas": {}
+                        }
+                    }';
+
+        return json_decode($baseJson);
+    }
+
+
+    /// Método que retorna uma "entidade" para obter os dados do campo info através de "echo $user->novo_info;"
+    protected function _getNovoInfo()
+    {
+        if(is_object($this->infoJson()) || is_array($this->infoJson()) ) {
+            $infoObj = $this->infoJson();
+
+            return $infoObj;
+        }
+    }
 }

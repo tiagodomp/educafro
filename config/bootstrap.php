@@ -43,7 +43,6 @@ use Cake\Mailer\Email;
 use Cake\Mailer\TransportFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
-
 /**
  * Uncomment block of code below if you want to use `.env` file during development.
  * You should copy `config/.env.default to `config/.env` and set/modify the
@@ -98,7 +97,8 @@ if (Configure::read('debug')) {
  * Set the default server timezone. Using UTC makes time calculations / conversions easier.
  * Check http://php.net/manual/en/timezones.php for list of valid timezone strings.
  */
-date_default_timezone_set(Configure::read('App.defaultTimezone'));
+//date_default_timezone_set(Configure::read('App.defaultTimezone'));
+date_default_timezone_set('America/Sao_Paulo');
 
 /*
  * Configure the mbstring extension to use the correct encoding.
@@ -192,6 +192,24 @@ Type::build('datetime')
 Type::build('timestamp')
     ->useImmutable();
 
+///Isto permite que os dados vindo das Tables sejam desserializado de uma string JSON do banco de dados e colocado em uma entidade como um array.
+Type::map('json', 'Cake\Database\Type\JsonType');
+
+/// Dados de Login do plugin CakeDC
+Configure::write('Users.Social.login', true); /// ativando a possibilidade de fazer login via rede social
+Configure::write('Users.GoogleAuthenticator.login', true); ///ativando a possibilidade de fazer login via autenticação do google
+
+///Dados de OAUTH para o clientId facebook
+Configure::write('OAuth.providers.facebook.options.clientId', 'YOUR APP ID');
+Configure::write('OAuth.providers.facebook.options.clientSecret', 'YOUR APP SECRET');
+
+/// Dados de reCaptcha
+Configure::write('Users.reCaptcha.key', 'YOUR RECAPTCHA KEY');
+Configure::write('Users.reCaptcha.secret', 'YOUR RECAPTCHA SECRET');
+Configure::write('Users.reCaptcha.registration', true); //ativar recaptcha no cadastro
+
+///Dados de login
+Configure::write('Auth.authenticate.Form.fields.username', 'email'); /// defini como email ao invés de username para autenticar user
 /*
  * Custom Inflector rules, can be set to correctly pluralize or singularize
  * table, model, controller names or whatever other string is passed to the

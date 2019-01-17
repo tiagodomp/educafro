@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\EventManager;
+use Cake\I18n\Time;
 
 /**
  * User Controller
@@ -17,6 +18,19 @@ class UserController extends AppController
     public function initialize()
     {
 
+    }
+
+    /**
+     * @return \App\Model\Table\UserTable
+     */
+    public function login()
+    {
+        $this->paginate = [
+            'contain' => ['UserCadastro', 'Perfis']
+        ];
+        $user = $this->paginate($this->User);
+
+        $this->set(compact('user'));
     }
 
     /// Método UserPaginaInicial() retorna a pagina home que o Inquilino verá,
@@ -38,7 +52,7 @@ class UserController extends AppController
                     'login.perfisPreferenciasID' => 'info.SessionInitial.login.perfis_preferencias_id@attributes',
                     'login.gruposMembrosID' => 'info.SessionInitial.login.grupos_membros_id@attributes',
                 ],
-                '.'
+                'false'
             ])
             ->jsonWhere([
                 'info.status.ativo@attributes' => true
@@ -56,8 +70,10 @@ class UserController extends AppController
             ->all();
         */
 
-        //$perfisID = $this->Users->find('json')->jsonSelect(['perfil.id' => 'info.SessionInitial.login.perfis_id@attributes'], 'false')->first()->toArray();
-        // Retornara $perfisID = ['perfis'=> ['id' => 'ValorRetornado']]
+        //$perfisID = $this->Users->find('json')->jsonSelect(['perfis.id' => 'info.SessionInitial.login.perfis_id@attributes'], '.')->first()->toArray();
+        // Retornara $perfisID = ['perfis.id' => 'ValorRetornado']]
+
+        $this->set('dadosIdsIniciais', $dadosIdsIniciais);
     }
 
     /**
@@ -71,7 +87,6 @@ class UserController extends AppController
             'contain' => ['UserCadastro', 'Perfis']
         ];
         $user = $this->paginate($this->User);
-
 
         $this->set(compact('user'));
     }
@@ -102,6 +117,7 @@ class UserController extends AppController
         $user = $this->User->newEntity();
         if ($this->request->is('post')) {
             $user = $this->User->patchEntity($user, $this->request->getData());
+            debug($user);
             if ($this->User->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 

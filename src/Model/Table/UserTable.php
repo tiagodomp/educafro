@@ -5,6 +5,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use CakeDC\Users\Model\Table\UsersTable;
 
 /**
  * User Model
@@ -23,8 +24,9 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class UserTable extends Table
+class UserTable extends UsersTable
 {
+
 
     /**
      * Initialize method
@@ -149,7 +151,7 @@ class UserTable extends Table
             ->allowEmptyString('link');
 
         $validator
-            ->allowEmptyString('info');
+            ->allowEmptyArray('info');
 
         $validator
             ->scalar('sexo')

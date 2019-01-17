@@ -43,7 +43,7 @@ class Application extends BaseApplication
 
         //CakeDC
         $this->addPlugin('CakeDC/Auth');
-        $this->addPlugin('CakeDC/Users');
+        $this->addPlugin('CakeDC/Users', ['bootstrap' => true, 'routes' => true]);
 
 
         //JoseGonzalez

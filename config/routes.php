@@ -63,7 +63,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $routes->connect('/', ['controller' => 'User', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'User', 'action' => 'login']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
@@ -439,6 +439,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/usuarios/adicionar/*', ['controller' => 'User', 'action' => 'add']);
     $routes->connect('/usuarios/editar/*', ['controller' => 'User', 'action' => 'edit']);
     $routes->connect('/usuarios/apagar/*', ['controller' => 'User', 'action' => 'delete']);
+    $routes->connect('/usuarios/pagina_inicial/*', ['controller' => 'User', 'action' => 'UserPaginaInicial']);
+    $routes->connect('/login/*', ['controller' => 'User', 'action' => 'login']);
 
     ///Rotas de User_Historico_Acoes
     $routes->connect('/usuario/historico/acoes/index/*', ['controller' => 'UserHistoricoAtribuicoes', 'action' => 'index']);
