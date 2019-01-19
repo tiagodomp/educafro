@@ -64,15 +64,17 @@ use Cake\Core\Configure;
                                         <?= $this->Form->button(__d('CakeDC/Users', 'Login')); ?>
                                     </div>
                                 </div>
-                            </form>
+                            <?= implode(' ', $this->User->socialLoginList()); ?>
+                            <?= $this->Form->button(__d('CakeDC/Users', 'Login')); ?>
+                            <?= $this->Form->end() ?>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="basic-login-inner">
-                            <h3><?= __("Ainda não tem cadastro")?></h3>
-                            <p>You can create an account:</p>
+                            <h3><?= __("Ainda não tem cadastro?")?></h3>
+                            <p><?= __("Crie sua conta gratuitamente agora!") ?></p>
                             <div class="create-account-sign">
-                                <a href="#"><i class="fa fa-sign-in big-icon"></i></a>
+                                <a href="<?= echo $this->Url->build('/registrar/', true)?>"><i class="fa fa-sign-in big-icon"></i></a>
                             </div>
                         </div>
                     </div>

@@ -441,6 +441,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/usuarios/apagar/*', ['controller' => 'User', 'action' => 'delete']);
     $routes->connect('/usuarios/pagina_inicial/*', ['controller' => 'User', 'action' => 'UserPaginaInicial']);
     $routes->connect('/login/*', ['controller' => 'User', 'action' => 'login']);
+    $routes->connect('/registrar/*', ['controller' => 'User', 'action' => 'registrar']);
 
     ///Rotas de User_Historico_Acoes
     $routes->connect('/usuario/historico/acoes/index/*', ['controller' => 'UserHistoricoAtribuicoes', 'action' => 'index']);
